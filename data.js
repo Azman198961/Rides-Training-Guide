@@ -60,7 +60,7 @@ const TOPICS = [
 TOPICS[0].html.bn = `
 <p class="lead">এই অংশে বাইক, কার, পার্সেল এবং সিএনজি রাইডারদের পাঠাও-এ যুক্ত হওয়ার সম্পূর্ণ প্রক্রিয়া নিয়ে আলোচনা করা হলো।</p>
 <h3>১. যানবাহনের যোগ্যতা</h3>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cx-table">
 <thead><tr><th>যানবাহনের ধরন</th><th>ন্যূনতম সিসি/ইঞ্জিন ক্ষমতা</th><th>মডেল বছর</th></tr></thead>
 <tbody>
 <tr><td>বাইক</td><td>১০০ সিসি</td><td>প্রযোজ্য নয়</td></tr>
@@ -69,7 +69,7 @@ TOPICS[0].html.bn = `
 <tr><td>সিএনজি</td><td>প্রযোজ্য নয়</td><td>প্রযোজ্য নয়</td></tr>
 </tbody></table></div>
 <h3>২. জয়েনিং এর জন্য প্রয়োজনীয় কাগজপত্র</h3>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cx-table">
 <thead><tr><th>যানবাহনের ধরন</th><th>প্রয়োজনীয় কাগজপত্র</th></tr></thead>
 <tbody>
 <tr><td>বাইক</td><td>জাতীয় পরিচয় পত্র, ড্রাইভিং লাইসেন্স (ফিজিকাল/অনলাইন কপি, পেশাদারি বা অপেশাদারি) অথবা ডেলিভারি রসিদ, রেজিস্ট্রেশন পেপার অথবা প্রাপ্তি স্বীকার রসিদ, ট্যাক্স টোকেন, ইন্স্যুরেন্স পেপার (ঐচ্ছিক), মালিকের জাতীয় পরিচয় পত্র (যদি নিজে গাড়ির মালিক না হন)</td></tr>
@@ -108,7 +108,7 @@ TOPICS[0].html.bn = `
 <li><strong>ছুটি (ঢাকা):</strong> শুক্রবার ও সরকারি ছুটির দিন</li>
 <li><strong>ছুটি (চট্টগ্রাম ও সিলেট):</strong> শুক্রবার, শনিবার ও সরকারি ছুটির দিন</li>
 </ul>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cx-table">
 <thead><tr><th>শহর</th><th>অফিসের ঠিকানা</th></tr></thead>
 <tbody>
 <tr><td>ঢাকা (বনানী)</td><td>জাহানারা গার্ডেন, বাড়ি নং ১০৩, রোড নং ১৩/এ, ব্লক-সি, বনানী, ঢাকা-১২১৩ (সাবেক বনানী পোস্ট অফিস সংলগ্ন)</td></tr>
@@ -136,7 +136,7 @@ TOPICS[0].html.bn = `
 TOPICS[0].html.en = `
 <p class="lead">This section covers the complete process for Bike, Car, Parcel, and CNG riders to join Pathao.</p>
 <h3>1. Vehicle Eligibility</h3>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cx-table">
 <thead><tr><th>Vehicle Type</th><th>Minimum CC / Engine Capacity</th><th>Model Year</th></tr></thead>
 <tbody>
 <tr><td>Bike</td><td>100cc</td><td>Not applicable</td></tr>
@@ -145,7 +145,7 @@ TOPICS[0].html.en = `
 <tr><td>CNG</td><td>Not applicable</td><td>Not applicable</td></tr>
 </tbody></table></div>
 <h3>2. Documents Required for Joining</h3>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cx-table">
 <thead><tr><th>Vehicle Type</th><th>Required Documents</th></tr></thead>
 <tbody>
 <tr><td>Bike</td><td>National ID card, driving license (physical or online copy, professional or non-professional) or delivery receipt, registration paper or acknowledgement receipt, tax token, insurance paper (optional), owner's NID (if the rider does not own the vehicle)</td></tr>
@@ -184,7 +184,7 @@ TOPICS[0].html.en = `
 <li><strong>Holidays (Dhaka):</strong> Friday and government holidays</li>
 <li><strong>Holidays (Chattogram & Sylhet):</strong> Friday, Saturday, and government holidays</li>
 </ul>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cx-table">
 <thead><tr><th>City</th><th>Office Address</th></tr></thead>
 <tbody>
 <tr><td>Dhaka (Banani)</td><td>Jahanara Garden, House 103, Road 13/A, Block-C, Banani, Dhaka-1213 (adjacent to the former Banani Post Office)</td></tr>
@@ -213,7 +213,7 @@ TOPICS[1].html.bn = `
 <p class="lead">নতুন রাইডার/ক্যাপ্টেন হিসেবে জয়েন করলে এবং পরিচিতদের রেফার করলে যেসব বোনাস পাওয়া যায় তার সম্পূর্ণ তালিকা।</p>
 <h3>জয়েনিং বোনাস: পার্সেল</h3>
 <p>নতুন পার্সেল সাইক্লিস্ট হিসেবে জয়েন করলেই পাচ্ছেন আকর্ষণীয় জয়েনিং বোনাস। শর্ত: কমপ্লিশন রেট ৮০% বা তার বেশি থাকতে হবে।</p>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cx-table">
 <thead><tr><th>সময়কাল</th><th>শর্ত</th><th>বোনাস</th></tr></thead>
 <tbody>
 <tr><td>প্রথম ৩ দিন</td><td>৩টি ট্রিপ</td><td>২০০ টাকা</td></tr>
@@ -223,7 +223,7 @@ TOPICS[1].html.bn = `
 <h3>জয়েনিং বোনাস: বাইক</h3>
 <div class="badge">New Rider Joining Bonus (New Offer) — শুরু: ১৫ আগস্ট, ২০২৫ (পরবর্তী নোটিশ না দেওয়া পর্যন্ত চালু)</div>
 <p>নতুন রাইডারদের জন্য শর্ত: ৬৫% কমপ্লিশন রেট বজায় রাখা।</p>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cx-table">
 <thead><tr><th>সময়কাল</th><th>শর্ত</th><th>বোনাস</th></tr></thead>
 <tbody>
 <tr><td>প্রথম ৩ দিন</td><td>৩টি ট্রিপ</td><td>১৫০ টাকা</td></tr>
@@ -233,7 +233,7 @@ TOPICS[1].html.bn = `
 <p>স্ল্যাব-ভিত্তিক কমিশন রেট অপরিবর্তিত থাকবে। <strong>এই অফার শুধুমাত্র ঢাকার জন্য প্রযোজ্য।</strong></p>
 <div class="callout"><strong>বিঃদ্রঃ</strong> নতুন রাইডার অ্যাকাউন্ট ভেরিফাই হওয়ার পরের দিন সকাল ১০টায় কোয়েস্ট চালু হবে। কোয়েস্টের সময়সীমা শেষ হওয়ার পর রাইডার তার ডিজিটাল ওয়ালেটে বোনাস পাবেন। উদাহরণস্বরূপ, ৩ দিনের মধ্যে ৩টি ট্রিপ সম্পন্ন করলে বোনাসটি ৩ দিন মেয়াদ শেষ হওয়ার পরের দিন পাওয়া যাবে।</div>
 <h3>জয়েনিং বোনাস: কার</h3>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cx-table">
 <thead><tr><th>সময়কাল</th><th>শর্ত</th><th>বোনাস</th></tr></thead>
 <tbody>
 <tr><td>প্রথম ৩ দিন</td><td>৩টি ট্রিপ</td><td>৫০০ টাকা</td></tr>
@@ -251,7 +251,7 @@ TOPICS[1].html.bn = `
 <ul><li>নতুন রাইডার পাবেন: <strong>১০০ টাকা</strong></li><li>যিনি রেফার করেছেন, তিনি পাবেন: <strong>২০০ টাকা</strong></li></ul>
 <p class="hint">রেফারেল কোড পাওয়া যাবে: Pathao Driver app &gt; Earning &gt; Referral Bonus &gt; See details</p>
 <h4>কার</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cx-table">
 <thead><tr><th>শহর ও ক্যাটাগরি</th><th>শর্ত</th><th>নতুন ক্যাপ্টেন পাবেন</th><th>রেফারকারী পাবেন</th></tr></thead>
 <tbody>
 <tr><td>ঢাকা — Car Plus</td><td>১৫ দিনে ১০টি ট্রিপ</td><td>৩০০ টাকা</td><td>২৫০ টাকা</td></tr>
@@ -265,7 +265,7 @@ TOPICS[1].html.en = `
 <p class="lead">A complete list of the bonuses available for joining as a new rider/captain and for referring people you know.</p>
 <h3>Joining Bonus: Parcel</h3>
 <p>New parcel cyclists get an attractive joining bonus. Condition: a completion rate of 80% or higher must be maintained.</p>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cx-table">
 <thead><tr><th>Period</th><th>Condition</th><th>Bonus</th></tr></thead>
 <tbody>
 <tr><td>First 3 days</td><td>3 trips</td><td>Tk. 200</td></tr>
@@ -275,7 +275,7 @@ TOPICS[1].html.en = `
 <h3>Joining Bonus: Bike</h3>
 <div class="badge">New Rider Joining Bonus (New Offer) — Start date: 15 August, 2025 (until further notice)</div>
 <p>Condition for new riders: maintain a 65% completion rate.</p>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cx-table">
 <thead><tr><th>Period</th><th>Condition</th><th>Bonus</th></tr></thead>
 <tbody>
 <tr><td>First 3 days</td><td>3 trips</td><td>Tk. 150</td></tr>
@@ -285,7 +285,7 @@ TOPICS[1].html.en = `
 <p>The slab-based commission rate remains unchanged. <strong>This joining bonus offer is applicable only in Dhaka.</strong></p>
 <div class="callout"><strong>Note:</strong> The quest becomes active at 10 AM the day after a new rider's account is verified. The rider receives the bonus in their digital wallet once each quest's time window ends. For example, if a rider completes 3 trips within a day, the bonus is credited the day after the 3-day window ends.</div>
 <h3>Joining Bonus: Car</h3>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cx-table">
 <thead><tr><th>Period</th><th>Condition</th><th>Bonus</th></tr></thead>
 <tbody>
 <tr><td>First 3 days</td><td>3 trips</td><td>Tk. 500</td></tr>
@@ -303,7 +303,7 @@ TOPICS[1].html.en = `
 <ul><li>New rider gets: <strong>Tk. 100</strong></li><li>Referrer gets: <strong>Tk. 200</strong></li></ul>
 <p class="hint">Find your referral code: Pathao Driver app &gt; Earning &gt; Referral Bonus &gt; See details</p>
 <h4>Car</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cx-table">
 <thead><tr><th>City & Category</th><th>Condition</th><th>New Captain Gets</th><th>Referrer Gets</th></tr></thead>
 <tbody>
 <tr><td>Dhaka — Car Plus</td><td>10 trips in 15 days</td><td>Tk. 300</td><td>Tk. 250</td></tr>
@@ -473,7 +473,7 @@ TOPICS[3].html.bn = `
 </div>
 <div class="tin-pane active" id="fare-bn-parcel">
 <h3>পার্সেল ভাড়া বিভাজন</h3>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cx-table">
 <thead><tr><th>উপাদান</th><th>পরিমাণ</th></tr></thead>
 <tbody>
 <tr><td>বেস ফেয়ার</td><td>৬০ টাকা</td></tr>
@@ -500,7 +500,7 @@ TOPICS[3].html.bn = `
 </ol>
 <div class="callout">শুধুমাত্র রাইডারের শারীরিক ক্ষতির বিপরীতে সেফটি কভারেজ প্রযোজ্য। গাড়ির ক্ষতির জন্য কোনো আর্থিক সুবিধা নেই।</div>
 <h4>পার্সেল স্টার প্রোগ্রাম ও বোনাস</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cx-table">
 <thead><tr><th>ক্যাটাগরি</th><th>মাসিক নিশ্চিত বোনাস (সর্বোচ্চ)</th></tr></thead>
 <tbody>
 <tr><td>প্লাটিনাম</td><td>১,০০০ টাকা</td></tr>
@@ -530,7 +530,7 @@ TOPICS[3].html.bn = `
 <p class="hint">ট্রিপ চলাকালীন সর্বদা ইন্টারনেট কানেকশন চালু রাখুন যাতে সিস্টেম ট্রিপের তথ্য সঠিকভাবে রেকর্ড করতে পারে।</p>
 <h4>কমিশন</h4>
 <p>বাইকের রেগুলার কমিশন <strong>১৫%</strong>। স্ল্যাব-ভিত্তিক কমিশন অফার চালু আছে (শুরু: ১২ মার্চ, ২০২৪ — পরবর্তী নোটিশ না দেওয়া পর্যন্ত):</p>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cx-table">
 <thead><tr><th>দিনের ট্রিপ</th><th>কমিশন</th></tr></thead>
 <tbody>
 <tr><td>১ম ও ২য় ট্রিপ</td><td>১৫%</td></tr>
@@ -605,7 +605,7 @@ TOPICS[3].html.en = `
 </div>
 <div class="tin-pane active" id="fare-en-parcel">
 <h3>Parcel Fare Breakdown</h3>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cx-table">
 <thead><tr><th>Component</th><th>Amount</th></tr></thead>
 <tbody>
 <tr><td>Base Fare</td><td>Tk. 60</td></tr>
@@ -632,7 +632,7 @@ TOPICS[3].html.en = `
 </ol>
 <div class="callout">Safety coverage applies only to the rider's physical injury. No financial benefit is provided for vehicle damage.</div>
 <h4>Parcel Star Program & Bonuses</h4>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cx-table">
 <thead><tr><th>Category</th><th>Guaranteed Monthly Bonus (Max)</th></tr></thead>
 <tbody>
 <tr><td>Platinum</td><td>Tk. 1,000</td></tr>
@@ -662,7 +662,7 @@ TOPICS[3].html.en = `
 <p class="hint">Always keep the internet connection active during a trip so the system can record trip data accurately.</p>
 <h4>Commission</h4>
 <p>The regular bike commission is <strong>15%</strong>. A slab-wise commission offer is currently running (start date: 12 March, 2024 — until further notice):</p>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cx-table">
 <thead><tr><th>Trip of the Day</th><th>Commission</th></tr></thead>
 <tbody>
 <tr><td>1st & 2nd trip</td><td>15%</td></tr>
@@ -730,7 +730,7 @@ TOPICS[3].html.en = `
 TOPICS[4].html.bn = `
 <p class="lead">প্রতিটি সেবার ডিউ লিমিট, পরিশোধ মাধ্যম ও ধাপে ধাপে পরিশোধ প্রক্রিয়া।</p>
 <h3>ডিউ লিমিট</h3>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cx-table">
 <thead><tr><th>শহর</th><th>বাইক / পার্সেল</th><th>কার</th></tr></thead>
 <tbody>
 <tr><td>ঢাকা</td><td>৩০০ টাকা</td><td>৬০০ টাকা</td></tr>
@@ -776,7 +776,7 @@ TOPICS[4].html.bn = `
 TOPICS[4].html.en = `
 <p class="lead">Due limits, payment methods, and step-by-step payment processes for each service.</p>
 <h3>Due Limits</h3>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cx-table">
 <thead><tr><th>City</th><th>Bike / Parcel</th><th>Car</th></tr></thead>
 <tbody>
 <tr><td>Dhaka</td><td>Tk. 300</td><td>Tk. 600</td></tr>
@@ -962,7 +962,7 @@ TOPICS[5].html.en = `
 TOPICS[6].html.bn = `
 <p class="lead">ডিজিটাল ও পে-লেটার পেমেন্টের ফ্লো, সব SOP লিংক এবং প্রতিদিনের কাজে ব্যবহৃত ইন্টারনাল টুলসের তালিকা।</p>
 <h3>প্রাথমিক পেমেন্ট মাধ্যম অনুযায়ী চূড়ান্ত পেমেন্ট অপশন</h3>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cx-table">
 <thead><tr><th>প্রাথমিক পেমেন্ট মাধ্যম</th><th>চূড়ান্ত পেমেন্ট মাধ্যম</th></tr></thead>
 <tbody>
 <tr><td>Cash</td><td>Cash, DP, Paylater, Pathao Pay</td></tr>
@@ -1013,7 +1013,7 @@ TOPICS[6].html.bn = `
 TOPICS[6].html.en = `
 <p class="lead">The digital and Pay Later payment flows, all SOP links, and the internal tools used in day-to-day work.</p>
 <h3>Final Payment Options by Initial Payment Method</h3>
-<div class="table-wrap"><table>
+<div class="table-wrap"><table class="cx-table">
 <thead><tr><th>Initial Payment Method</th><th>Final Payment Method</th></tr></thead>
 <tbody>
 <tr><td>Cash</td><td>Cash, DP, Paylater, Pathao Pay</td></tr>

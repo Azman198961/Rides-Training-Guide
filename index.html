@@ -8,14 +8,15 @@
   <!-- Favicon Fix -->
   <link rel="shortcut icon" href="#">
   
-  <link rel="stylesheet" href="styles.css">
+  <!-- CSS Link with Versioning to bypass Browser Cache -->
+  <link rel="stylesheet" href="styles.css?v=3.0">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
   
   <!-- Header / Navigation -->
   <header class="header">
-    <div class="logo-container" id="go-home" style="cursor: pointer;">
+    <div class="logo-container" id="go-home">
       <i class="fas fa-motorcycle ride-icon-logo"></i>
       <span class="brand-name">pathao <small>Rides CX</small></span>
     </div>
@@ -25,11 +26,10 @@
     </div>
   </header>
 
-  <!-- Section 1: Hero / Welcome Page -->
+  <!-- Section 1: Hero / Welcome Page View -->
   <section id="welcome-view" class="view active-view">
     <div class="hero-card">
       <div class="animation-track">
-        <div class="road-line"></div>
         <i class="fas fa-motorcycle animated-bike"></i>
       </div>
       <h1 id="welcome-title">Welcome to Pathao Rides Training Guide</h1>
@@ -41,7 +41,7 @@
     </div>
   </section>
 
-  <!-- Section 2: Topic Selection Tiles -->
+  <!-- Section 2: Topic Selection Grid View -->
   <section id="topics-view" class="view">
     <div class="container">
       <div class="view-header">
@@ -49,12 +49,12 @@
         <h2 id="topics-title">Select a Training Topic</h2>
       </div>
       <div class="topics-grid" id="topics-grid">
-        <!-- Topic tiles dynamically injected here by JS -->
+        <!-- Topic tiles injected dynamically by JS -->
       </div>
     </div>
   </section>
 
-  <!-- Section 3: Topic Content Detail Page -->
+  <!-- Section 3: Topic Content Detail Page View -->
   <section id="detail-view" class="view">
     <div class="container">
       <div class="view-header">
@@ -62,9 +62,9 @@
         <h2 id="detail-topic-title">Topic Title</h2>
       </div>
 
-      <!-- Tab Content Area -->
+      <!-- Tab Content Display Box -->
       <div class="content-box card-animation" id="content-display">
-        <!-- Content injected dynamically -->
+        <!-- Topic detail HTML injected dynamically -->
       </div>
     </div>
   </section>

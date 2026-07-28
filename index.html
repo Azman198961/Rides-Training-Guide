@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pathao Rides CX Training Guide</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  
+  <!-- Header / Navigation -->
+  <header class="header">
+    <div class="logo-container" id="go-home">
+      <i class="fas fa-motorcycle ride-icon-logo"></i>
+      <span class="brand-name">pathao <small>Rides CX</small></span>
+    </div>
+    <div class="lang-switch">
+      <button id="lang-bn" class="lang-btn active">বাংলা</button>
+      <button id="lang-en" class="lang-btn">English</button>
+    </div>
+  </header>
+
+  <!-- Section 1: Hero / Welcome Page -->
+  <section id="welcome-view" class="view active-view">
+    <div class="hero-card">
+      <div class="animation-track">
+        <div class="road-line"></div>
+        <i class="fas fa-motorcycle animated-bike"></i>
+      </div>
+      <h1 id="welcome-title">Welcome to Pathao Rides Training Guide</h1>
+      <p id="welcome-subtitle">Master customer experience, ride flows, and internal tools with ease.</p>
+      <button id="btn-choose-topic" class="primary-btn">
+        <span id="btn-text">Choose your Topic</span>
+        <i class="fas fa-arrow-right"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- Section 2: Topic Selection Tiles -->
+  <section id="topics-view" class="view">
+    <div class="container">
+      <div class="view-header">
+        <button class="back-btn" id="back-to-home"><i class="fas fa-chevron-left"></i> Home</button>
+        <h2 id="topics-title">Select a Training Topic</h2>
+      </div>
+      <div class="topics-grid" id="topics-grid">
+        <!-- Topic tiles dynamically injected here by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Topic Content Detail Page -->
+  <section id="detail-view" class="view">
+    <div class="container">
+      <div class="view-header">
+        <button class="back-btn" id="back-to-topics"><i class="fas fa-chevron-left"></i> All Topics</button>
+        <h2 id="detail-topic-title">Topic Title</h2>
+      </div>
+      
+      <!-- Subtabs for details -->
+      <div class="tabs-container" id="subtabs-container">
+        <!-- Subtabs generated dynamically -->
+      </div>
+
+      <!-- Tab Content Area -->
+      <div class="content-box card-animation" id="content-display">
+        <!-- Content injected dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

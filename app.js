@@ -30,7 +30,7 @@
   let lang = localStorage.getItem(STORAGE_LANG) || "bn";
   let activeTopic = localStorage.getItem(STORAGE_TOPIC) || (typeof TOPICS !== "undefined" && TOPICS[0] ? TOPICS[0].id : "");
 
-  // DOM Elements Matching HTML IDs
+  // DOM Elements
   const btnBn = document.getElementById("lang-bn");
   const btnEn = document.getElementById("lang-en");
   const goHome = document.getElementById("go-home");
@@ -81,7 +81,7 @@
     }
   }
 
-  // Render Grid Tiles in Topics View
+  // Render Topic Cards Grid
   function renderTopicsGrid() {
     if (!topicsGrid || typeof TOPICS === "undefined") return;
     topicsGrid.innerHTML = "";
@@ -111,7 +111,7 @@
     });
   }
 
-  // Bind Subtabs inside content (Inner Tabs)
+  // Inner Tabs Click Handling
   function bindInnerTabs(root) {
     if (!root) return;
     root.querySelectorAll(".tin-btn").forEach((btn) => {
@@ -132,7 +132,7 @@
     });
   }
 
-  // Render Topic Detail Content
+  // Render Content Details
   function renderDetailContent() {
     if (typeof TOPICS === "undefined" || !TOPICS.length) return;
     const topic = TOPICS.find((t) => t.id === activeTopic) || TOPICS[0];
@@ -144,7 +144,7 @@
     }
   }
 
-  // Language Switch Handler
+  // Switch Language
   function setLang(next) {
     lang = next;
     localStorage.setItem(STORAGE_LANG, lang);
@@ -157,7 +157,7 @@
     renderDetailContent();
   }
 
-  // Event Listeners with Safe Checks
+  // Event Listeners
   btnBn?.addEventListener("click", () => setLang("bn"));
   btnEn?.addEventListener("click", () => setLang("en"));
 
@@ -166,7 +166,7 @@
   backToHome?.addEventListener("click", () => showView(welcomeView));
   backToTopics?.addEventListener("click", () => showView(topicsView));
 
-  // Initialize Application
+  // Initialize
   function init() {
     if (typeof TOPICS !== "undefined" && TOPICS.length > 0) {
       if (!TOPICS.find((t) => t.id === activeTopic)) {

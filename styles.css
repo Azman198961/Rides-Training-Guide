@@ -1,5 +1,5 @@
 /* ==========================================
-   Pathao CX Training Material - Refined CSS (Updated)
+   Pathao CX Training Material - Refined & Clean CSS
    ========================================== */
 
 :root {
@@ -8,7 +8,7 @@
   --bg-color: #f8fafc;
   --card-bg: #ffffff;
   --text-dark: #0f172a;
-  --text-muted: #64748b;
+  --text-muted: #475569;
   --border-color: #cbd5e1;
   --radius: 16px;
   --transition: all 0.25s ease-in-out;
@@ -29,7 +29,7 @@ body {
   flex-direction: column;
 }
 
-/* Single Page View Control */
+/* View Control */
 .view {
   display: none !important;
   visibility: hidden;
@@ -182,219 +182,154 @@ body {
 .topic-card-content h3 { font-size: 16px; font-weight: 700; margin: 2px 0 6px; }
 .topic-card-content p { font-size: 13px; color: var(--text-muted); line-height: 1.4; }
 
-/* General Detail Box Base */
+/* ==========================================
+   CONTENT DISPLAY & STRUCTURED CARDS
+   ========================================== */
+
 .content-box {
   padding: 35px;
   border-radius: var(--radius);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
   min-height: 400px;
   line-height: 1.7;
-  background-color: var(--card-bg);
 }
 
-.lead { font-size: 16px; font-weight: 500; margin-bottom: 24px; }
-.content-box h3 { font-size: 18px; margin: 24px 0 12px; border-bottom: 2px solid rgba(0,0,0,0.05); padding-bottom: 6px; }
-.content-box h4 { font-size: 15px; margin: 18px 0 8px; }
-.content-box p { margin-bottom: 12px; }
+/* Headings Improvement */
+.content-box h1, .content-box h2 {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.content-box h3 {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 28px 0 14px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.content-box h4 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 18px 0 10px 0;
+}
+
+/* Section Card Wrapping for Scannability */
+.content-box section, 
+.content-box .section-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+/* Bullet Points & Step Lists */
+.content-box ul, .content-box ol {
+  padding-left: 20px;
+  margin-bottom: 16px;
+}
+
+.content-box li {
+  margin-bottom: 8px;
+  color: var(--text-dark);
+}
+
+.content-box li strong {
+  color: #000;
+}
+
+/* Clean Structured Table Styling */
+.cx-table, .content-box table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 16px 0 24px;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+
+.cx-table th, .content-box table th {
+  background: #f1f5f9;
+  color: #1e293b;
+  text-align: left;
+  padding: 12px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  border-bottom: 2px solid #cbd5e1;
+}
+
+.cx-table td, .content-box table td {
+  padding: 12px 16px;
+  font-size: 13.5px;
+  color: #334155;
+  border-bottom: 1px solid #e2e8f0;
+  background: #fff;
+}
+
+.cx-table tr:last-child td, .content-box table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Callout Note Boxes */
+.callout, .content-box .note {
+  background: #ffffff;
+  border-left: 4px solid var(--primary);
+  padding: 14px 18px;
+  border-radius: 4px 10px 10px 4px;
+  margin: 16px 0;
+  font-size: 13.5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
 
 /* ==========================================
-   TOPIC-SPECIFIC BACKGROUND THEMES
+   THEME ACCENTS & SHADES
    ========================================== */
 
-/* 1 & 2. Joining & Joining Bonus -> Light Green */
+/* 1. Joining */
 .theme-joining {
   background-color: #f0fdf4 !important;
   border: 1px solid #bbf7d0 !important;
-  color: #14532d !important;
 }
-.theme-joining h3, .theme-joining h4 { color: #166534 !important; border-color: #bbf7d0 !important; }
+.theme-joining h1, .theme-joining h2, .theme-joining h3 { color: #166534 !important; }
 
-/* 3. Star Program -> Golden / Light Yellow Accent */
-.theme-star {
-  background-color: #fefce8 !important;
-  border: 1px solid #fef08a !important;
-  color: #713f12 !important;
-}
-.theme-star h3, .theme-star h4 { color: #854d0e !important; border-color: #fef08a !important; }
-
-/* 4. Fare -> Light Red */
+/* 2. Fare */
 .theme-fare {
   background-color: #fff1f2 !important;
   border: 1px solid #fecdd3 !important;
-  color: #881337 !important;
 }
-.theme-fare h3, .theme-fare h4 { color: #9f1239 !important; border-color: #fecdd3 !important; }
+.theme-fare h1, .theme-fare h2, .theme-fare h3 { color: #9f1239 !important; }
 
-/* 5. Due -> Light Yellow */
+/* 3. Star */
+.theme-star {
+  background-color: #fefce8 !important;
+  border: 1px solid #fef08a !important;
+}
+.theme-star h1, .theme-star h2, .theme-star h3 { color: #854d0e !important; }
+
+/* 4. Flag */
+.theme-flag {
+  background-color: #fef2f2 !important;
+  border: 1px solid #fca5a5 !important;
+}
+.theme-flag h1, .theme-flag h2, .theme-flag h3 { color: #991b1b !important; }
+
+/* 5. Due */
 .theme-due {
   background-color: #fffbe3 !important;
   border: 1px solid #fde047 !important;
-  color: #713f12 !important;
 }
-.theme-due h3, .theme-due h4 { color: #a16207 !important; border-color: #fde047 !important; }
+.theme-due h1, .theme-due h2, .theme-due h3 { color: #a16207 !important; }
 
-/* 6. Flag -> Bright Red Accent Container */
-.theme-flag {
-  background-color: #fef2f2 !important;
-  border: 2px solid #ef4444 !important;
-  color: #7f1d1d !important;
-}
-.theme-flag h3, .theme-flag h4 { color: #991b1b !important; border-color: #fca5a5 !important; }
-
-/* 7. Payment Flow -> Light Blue */
+/* 6. Payment */
 .theme-payment {
   background-color: #f0f9ff !important;
   border: 1px solid #bae6fd !important;
-  color: #0c4a6e !important;
 }
-.theme-payment h3, .theme-payment h4 { color: #0369a1 !important; border-color: #bae6fd !important; }
-
-
-/* Structured Table Styling */
-.table-wrap { width: 100%; overflow-x: auto; margin: 16px 0; }
-table {
-  width: 100%;
-  border-collapse: collapse;
-  background: #ffffff;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
-  font-size: 14px;
-}
-th {
-  background: rgba(0, 0, 0, 0.05);
-  text-align: left;
-  padding: 12px 14px;
-  font-weight: 700;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-}
-td {
-  padding: 12px 14px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-}
-
-/* Callouts, Badges & Scripts */
-.callout {
-  background: #ffffff;
-  border-left: 4px solid var(--primary);
-  padding: 16px;
-  border-radius: 0 12px 12px 0;
-  margin: 16px 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.03);
-}
-.callout.warn { border-left-color: #eab308; }
-
-.badge {
-  display: inline-block;
-  background: #fee2e2;
-  color: #991b1b;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 13px;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-
-.script-box {
-  background: #ffffff;
-  border: 1px dashed var(--border-color);
-  padding: 16px;
-  border-radius: 12px;
-  margin: 16px 0;
-}
-
-/* Inner Tab UI */
-.tabs-inner-nav {
-  display: flex;
-  gap: 8px;
-  border-bottom: 2px solid rgba(0,0,0,0.1);
-  margin-bottom: 20px;
-  overflow-x: auto;
-}
-.tin-btn {
-  background: transparent;
-  border: none;
-  padding: 10px 18px;
-  font-weight: 700;
-  color: var(--text-muted);
-  cursor: pointer;
-  border-bottom: 3px solid transparent;
-  margin-bottom: -2px;
-  white-space: nowrap;
-}
-.tin-btn.active {
-  color: var(--primary);
-  border-bottom-color: var(--primary);
-}
-.tin-pane { display: none; }
-.tin-pane.active { display: block; animation: fadeIn 0.25s ease-in-out; }
-
-/* FAQ Accordion */
-.faq details {
-  background: #ffffff;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  border: 1px solid rgba(0,0,0,0.08);
-  padding: 12px 16px;
-}
-.faq summary {
-  font-weight: 700;
-  cursor: pointer;
-  outline: none;
-}
-.faq details[open] summary { margin-bottom: 8px; color: var(--primary); }
-
-/* Tier & Status Grids */
-.tier-grid, .status-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 16px;
-  margin: 16px 0;
-}
-.tier {
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 12px;
-  border: 1px solid rgba(0,0,0,0.1);
-}
-.tier-target { font-size: 12px; font-weight: 700; color: var(--text-muted); margin-bottom: 12px; }
-
-.status-chip {
-  padding: 10px 14px;
-  border-radius: 8px;
-  font-weight: 700;
-  font-size: 13px;
-  color: #fff;
-  text-align: center;
-}
-.status-red { background: #ef4444; }
-.status-green { background: #10b981; }
-.status-yellow { background: #f59e0b; }
-.status-gray { background: #6b7280; }
-.status-black { background: #1f2937; }
-
-/* SOP & Tools Grid */
-.link-grid, .tool-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 16px;
-  margin: 16px 0;
-}
-.link-card, .tool-card {
-  background: #ffffff;
-  padding: 14px 18px;
-  border-radius: 12px;
-  border: 1px solid rgba(0,0,0,0.1);
-  text-decoration: none;
-  color: var(--text-dark);
-  display: flex;
-  flex-direction: column;
-  transition: var(--transition);
-}
-.link-card:hover, .tool-card:hover {
-  transform: translateY(-3px);
-  border-color: var(--primary);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-.tool-name { font-weight: 700; font-size: 14px; }
-.tool-url { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+.theme-payment h1, .theme-payment h2, .theme-payment h3 { color: #0369a1 !important; }

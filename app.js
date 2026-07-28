@@ -24,17 +24,28 @@
     }
   };
 
-  const STORAGE_LANG = "pathao_cx_lang";
-  const STORAGE_TOPIC = "pathao_cx_topic";
+  const STORAGE_LANG = "pathao_cx_lang_v2";
+  const STORAGE_TOPIC = "pathao_cx_topic_v2";
 
   let lang = localStorage.getItem(STORAGE_LANG) || "bn";
   let activeTopic = localStorage.getItem(STORAGE_TOPIC) || (typeof TOPICS !== "undefined" && TOPICS[0] ? TOPICS[0].id : "");
+
+  // Topic ID to Theme Class Mapping
+  const THEME_MAP = {
+    joining: "theme-joining",
+    bonus: "theme-joining",
+    star: "theme-star",
+    fare: "theme-fare",
+    due: "theme-due",
+    flag: "theme-flag",
+    tools: "theme-payment"
+  };
 
   // DOM Elements
   const btnBn = document.getElementById("lang-bn");
   const btnEn = document.getElementById("lang-en");
   const goHome = document.getElementById("go-home");
-  
+
   const welcomeView = document.getElementById("welcome-view");
   const topicsView = document.getElementById("topics-view");
   const detailView = document.getElementById("detail-view");
@@ -125,11 +136,23 @@
 
         const targetId = btn.getAttribute("data-target");
         container.querySelectorAll(".tin-pane").forEach((p) => p.classList.remove("active"));
-        
+
         const targetPane = container.querySelector("#" + targetId);
         if (targetPane) targetPane.classList.add("active");
       });
     });
+  }
+
+  // Apply Topic Theme CSS Class Dynamic
+  function applyTopicTheme(topicId) {
+    if (!contentDisplay) return;
+    
+    // Clean old themes
+    Object.values(THEME_MAP).forEach((cls) => contentDisplay.classList.remove(cls));
+    
+    // Add current theme
+    const themeClass = THEME_MAP[topicId] || "theme-joining";
+    contentDisplay.classList.add(themeClass);
   }
 
   // Render Content Details
@@ -139,6 +162,7 @@
 
     if (detailTopicTitle) detailTopicTitle.textContent = topic.title[lang];
     if (contentDisplay) {
+      applyTopicTheme(topic.id);
       contentDisplay.innerHTML = topic.html[lang];
       bindInnerTabs(contentDisplay);
     }
@@ -179,6 +203,7 @@
 
     applyStrings();
     renderTopicsGrid();
+    renderDetailContent();
   }
 
   init();

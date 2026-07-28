@@ -5,14 +5,22 @@
     bn: {
       brandTitle: "Pathao Rides CX",
       brandSub: "ট্রেনিং ম্যাটেরিয়াল",
-      topicsLabel: "টপিকস",
-      footerNote: "পাঠাও রাইডস কাস্টমার এক্সপেরিয়েন্স টিমের জন্য প্রস্তুতকৃত।"
+      welcomeTitle: "পাঠাও রাইডস ট্রেনিং গাইডে স্বাগতম",
+      welcomeSubtitle: "কাস্টমার এক্সপেরিয়েন্স, রাইড ফ্লো এবং ইন্টারনাল টুলস সহজে শিখুন।",
+      btnChooseTopic: "টপিক নির্বাচন করুন",
+      topicsTitle: "একটি ট্রেনিং টপিক নির্বাচন করুন",
+      backHome: "হোম",
+      backTopics: "সব টপিক"
     },
     en: {
       brandTitle: "Pathao Rides CX",
       brandSub: "Training Material",
-      topicsLabel: "Topics",
-      footerNote: "Prepared for the Pathao Rides Customer Experience team."
+      welcomeTitle: "Welcome to Pathao Rides Training Guide",
+      welcomeSubtitle: "Master customer experience, ride flows, and internal tools with ease.",
+      btnChooseTopic: "Choose your Topic",
+      topicsTitle: "Select a Training Topic",
+      backHome: "Home",
+      backTopics: "All Topics"
     }
   };
 
@@ -20,119 +28,158 @@
   const STORAGE_TOPIC = "pathao_cx_topic";
 
   let lang = localStorage.getItem(STORAGE_LANG) || "bn";
-  let activeTopic = localStorage.getItem(STORAGE_TOPIC) || (TOPICS[0] && TOPICS[0].id);
+  let activeTopic = localStorage.getItem(STORAGE_TOPIC) || (typeof TOPICS !== "undefined" && TOPICS[0] ? TOPICS[0].id : "");
 
-  const topicListEl = document.getElementById("topicList");
-  const heroEyebrow = document.getElementById("heroEyebrow");
-  const heroTitle = document.getElementById("heroTitle");
-  const heroSubtitle = document.getElementById("heroSubtitle");
-  const panelEl = document.getElementById("panel");
-  const btnBn = document.getElementById("btnBn");
-  const btnEn = document.getElementById("btnEn");
-  const sideNav = document.getElementById("sideNav");
-  const menuToggle = document.getElementById("menuToggle");
-  const scrim = document.getElementById("scrim");
+  // DOM Elements Matching HTML IDs
+  const btnBn = document.getElementById("lang-bn");
+  const btnEn = document.getElementById("lang-en");
+  const goHome = document.getElementById("go-home");
+  
+  const welcomeView = document.getElementById("welcome-view");
+  const topicsView = document.getElementById("topics-view");
+  const detailView = document.getElementById("detail-view");
 
-  function applyStrings() {
-    document.querySelectorAll("[data-i18n]").forEach((el) => {
-      const key = el.getAttribute("data-i18n");
-      if (STRINGS[lang][key]) el.textContent = STRINGS[lang][key];
+  const welcomeTitle = document.getElementById("welcome-title");
+  const welcomeSubtitle = document.getElementById("welcome-subtitle");
+  const btnChooseTopic = document.getElementById("btn-choose-topic");
+  const btnText = document.getElementById("btn-text");
+
+  const topicsTitle = document.getElementById("topics-title");
+  const topicsGrid = document.getElementById("topics-grid");
+  const backToHome = document.getElementById("back-to-home");
+
+  const backToTopics = document.getElementById("back-to-topics");
+  const detailTopicTitle = document.getElementById("detail-topic-title");
+  const contentDisplay = document.getElementById("content-display");
+
+  // View Switcher Helper
+  function showView(viewEl) {
+    [welcomeView, topicsView, detailView].forEach((v) => {
+      if (v) v.classList.remove("active-view");
     });
+    if (viewEl) viewEl.classList.add("active-view");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  // Apply Multilingual Strings
+  function applyStrings() {
     document.documentElement.lang = lang;
     document.title = lang === "bn"
       ? "Pathao Rides CX — ট্রেনিং ম্যাটেরিয়াল"
       : "Pathao Rides CX — Training Material";
+
+    if (welcomeTitle) welcomeTitle.textContent = STRINGS[lang].welcomeTitle;
+    if (welcomeSubtitle) welcomeSubtitle.textContent = STRINGS[lang].welcomeSubtitle;
+    if (btnText) btnText.textContent = STRINGS[lang].btnChooseTopic;
+    if (topicsTitle) topicsTitle.textContent = STRINGS[lang].topicsTitle;
+
+    if (backToHome) {
+      backToHome.innerHTML = `<i class="fas fa-chevron-left"></i> ${STRINGS[lang].backHome}`;
+    }
+    if (backToTopics) {
+      backToTopics.innerHTML = `<i class="fas fa-chevron-left"></i> ${STRINGS[lang].backTopics}`;
+    }
   }
 
-  function renderNav() {
-    topicListEl.innerHTML = "";
+  // Render Grid Tiles in Topics View
+  function renderTopicsGrid() {
+    if (!topicsGrid || typeof TOPICS === "undefined") return;
+    topicsGrid.innerHTML = "";
+
     TOPICS.forEach((t) => {
-      const btn = document.createElement("button");
-      btn.className = "topic-item" + (t.id === activeTopic ? " active" : "");
-      btn.setAttribute("data-topic", t.id);
-      btn.innerHTML = `
-        <span class="topic-stop">${t.num}</span>
-        <span class="topic-body">
-          <span class="topic-title">${t.title[lang]}</span>
-          <span class="topic-sub">${t.subtitle[lang]}</span>
-        </span>`;
-      btn.addEventListener("click", () => {
+      const card = document.createElement("div");
+      card.className = "topic-card";
+      card.innerHTML = `
+        <div class="topic-card-icon">
+          <i class="fas fa-${t.icon || 'book'}"></i>
+        </div>
+        <div class="topic-card-content">
+          <span class="topic-num">Topic ${t.num}</span>
+          <h3>${t.title[lang]}</h3>
+          <p>${t.subtitle[lang]}</p>
+        </div>
+      `;
+
+      card.addEventListener("click", () => {
         activeTopic = t.id;
         localStorage.setItem(STORAGE_TOPIC, activeTopic);
-        renderNav();
-        renderContent();
-        closeMobileNav();
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        renderDetailContent();
+        showView(detailView);
       });
-      topicListEl.appendChild(btn);
+
+      topicsGrid.appendChild(card);
     });
   }
 
+  // Bind Subtabs inside content (Inner Tabs)
   function bindInnerTabs(root) {
-    const groups = {};
+    if (!root) return;
     root.querySelectorAll(".tin-btn").forEach((btn) => {
-      const nav = btn.parentElement;
-      if (!groups[nav.dataset.group || nav.outerHTML.slice(0, 10) + Math.random()]) {
-        // noop grouping key set below anyway
-      }
       btn.addEventListener("click", () => {
         const navEl = btn.closest(".tabs-inner-nav");
         const container = btn.closest(".tabs-inner");
+        if (!navEl || !container) return;
+
         navEl.querySelectorAll(".tin-btn").forEach((b) => b.classList.remove("active"));
         btn.classList.add("active");
+
         const targetId = btn.getAttribute("data-target");
         container.querySelectorAll(".tin-pane").forEach((p) => p.classList.remove("active"));
+        
         const targetPane = container.querySelector("#" + targetId);
         if (targetPane) targetPane.classList.add("active");
       });
     });
   }
 
-  function renderContent() {
+  // Render Topic Detail Content
+  function renderDetailContent() {
+    if (typeof TOPICS === "undefined" || !TOPICS.length) return;
     const topic = TOPICS.find((t) => t.id === activeTopic) || TOPICS[0];
-    const idx = TOPICS.indexOf(topic) + 1;
-    const total = TOPICS.length;
-    heroEyebrow.textContent = String(idx).padStart(2, "0") + " / " + String(total).padStart(2, "0");
-    heroTitle.textContent = topic.title[lang];
-    heroSubtitle.textContent = topic.subtitle[lang];
-    panelEl.innerHTML = topic.html[lang];
-    bindInnerTabs(panelEl);
+
+    if (detailTopicTitle) detailTopicTitle.textContent = topic.title[lang];
+    if (contentDisplay) {
+      contentDisplay.innerHTML = topic.html[lang];
+      bindInnerTabs(contentDisplay);
+    }
   }
 
+  // Language Switch Handler
   function setLang(next) {
     lang = next;
     localStorage.setItem(STORAGE_LANG, lang);
-    btnBn.classList.toggle("active", lang === "bn");
-    btnEn.classList.toggle("active", lang === "en");
+
+    btnBn?.classList.toggle("active", lang === "bn");
+    btnEn?.classList.toggle("active", lang === "en");
+
     applyStrings();
-    renderNav();
-    renderContent();
+    renderTopicsGrid();
+    renderDetailContent();
   }
 
-  function openMobileNav() {
-    sideNav.classList.add("open");
-    scrim.classList.add("show");
-    menuToggle.setAttribute("aria-expanded", "true");
+  // Event Listeners with Safe Checks
+  btnBn?.addEventListener("click", () => setLang("bn"));
+  btnEn?.addEventListener("click", () => setLang("en"));
+
+  goHome?.addEventListener("click", () => showView(welcomeView));
+  btnChooseTopic?.addEventListener("click", () => showView(topicsView));
+  backToHome?.addEventListener("click", () => showView(welcomeView));
+  backToTopics?.addEventListener("click", () => showView(topicsView));
+
+  // Initialize Application
+  function init() {
+    if (typeof TOPICS !== "undefined" && TOPICS.length > 0) {
+      if (!TOPICS.find((t) => t.id === activeTopic)) {
+        activeTopic = TOPICS[0].id;
+      }
+    }
+
+    btnBn?.classList.toggle("active", lang === "bn");
+    btnEn?.classList.toggle("active", lang === "en");
+
+    applyStrings();
+    renderTopicsGrid();
   }
-  function closeMobileNav() {
-    sideNav.classList.remove("open");
-    scrim.classList.remove("show");
-    menuToggle.setAttribute("aria-expanded", "false");
-  }
 
-  menuToggle.addEventListener("click", () => {
-    sideNav.classList.contains("open") ? closeMobileNav() : openMobileNav();
-  });
-  scrim.addEventListener("click", closeMobileNav);
-
-  btnBn.addEventListener("click", () => setLang("bn"));
-  btnEn.addEventListener("click", () => setLang("en"));
-
-  // init
-  if (!TOPICS.find((t) => t.id === activeTopic)) activeTopic = TOPICS[0].id;
-  btnBn.classList.toggle("active", lang === "bn");
-  btnEn.classList.toggle("active", lang === "en");
-  applyStrings();
-  renderNav();
-  renderContent();
+  init();
 })();

@@ -48,11 +48,19 @@ const TOPICS = [
     html: { bn: "", en: "" }
   },
   {
-    id: "tools",
+    id: "payment-flow",
     num: "07",
+    icon: "refresh-cw",
+    title: { bn: "পেমেন্ট ফ্লো", en: "Payment Flow" },
+    subtitle: { bn: "ডিজিটাল, পে-লেটার ও ডিউ পেমেন্ট ফ্লো", en: "Digital, Pay Later & due payment flow" },
+    html: { bn: "", en: "" }
+  },
+  {
+    id: "sops-tools",
+    num: "08",
     icon: "tool",
-    title: { bn: "পেমেন্ট ফ্লো ও টুলস", en: "Payment Flow & Tools" },
-    subtitle: { bn: "ডিজিটাল পেমেন্ট ফ্লো, SOP ও ইন্টারনাল টুলস", en: "Digital payment flow, SOPs & internal tools" },
+    title: { bn: "SOP ও ইন্টারনাল টুলস", en: "SOPs & Internal Tools" },
+    subtitle: { bn: "জরুরি SOP লিংক ও ইন্টারনাল টুলস", en: "Essential SOP links & internal tools" },
     html: { bn: "", en: "" }
   }
 ];
@@ -960,7 +968,7 @@ TOPICS[5].html.en = `
 `;
 
 TOPICS[6].html.bn = `
-<p class="lead">ডিজিটাল ও পে-লেটার পেমেন্টের ফ্লো, সব SOP লিংক এবং প্রতিদিনের কাজে ব্যবহৃত ইন্টারনাল টুলসের তালিকা।</p>
+<p class="lead">ডিজিটাল, পে-লেটার এবং ডিউ পরিশোধের সম্পূর্ণ পেমেন্ট ফ্লো।</p>
 <h3>প্রাথমিক পেমেন্ট মাধ্যম অনুযায়ী চূড়ান্ত পেমেন্ট অপশন</h3>
 <div class="table-wrap"><table class="cx-table">
 <thead><tr><th>প্রাথমিক পেমেন্ট মাধ্যম</th><th>চূড়ান্ত পেমেন্ট মাধ্যম</th></tr></thead>
@@ -990,28 +998,10 @@ TOPICS[6].html.bn = `
 <div class="flow">
 <div class="flow-step"><span class="flow-num">১</span><div><h4>PAYMENT</h4><p>ড্রাইভ অ্যাপ থেকে পেমেন্ট রিকোয়েস্ট করে বিকাশ, রকেট অথবা ওয়ানব্যাংক এটিএমে পাঠানো হয়।</p></div></div>
 </div>
-<h3>সকল SOP</h3>
-<div class="link-grid">
-<a class="link-card" href="https://docs.google.com/spreadsheets/d/1J8dOd8iXyBzQafpQS-2NDt5EvlLCE0Pc0lxRkcozspc/edit?pli=1&gid=1275837616#gid=1275837616" target="_blank" rel="noopener"><span>Driver SOP</span><small>Rides Merged SOP</small></a>
-<a class="link-card" href="https://docs.google.com/spreadsheets/d/1iv2mUrA_DEbj03bPWOHwrzxionkqYsCp7aAkm7N5avs/edit?gid=925150589#gid=925150589" target="_blank" rel="noopener"><span>User SOP</span><small>Bike / Car / Parcel / CNG</small></a>
-<a class="link-card" href="https://docs.google.com/spreadsheets/d/10aewHdiWp0rd57hE3Pi1r30O549xlVBWfZDHuytpG1k/edit?gid=302837988#gid=302837988" target="_blank" rel="noopener"><span>Rides Flag Dashboard</span><small>ফ্ল্যাগ ট্রিপ ট্র্যাকিং</small></a>
-<a class="link-card" href="https://docs.google.com/spreadsheets/d/17RRkdGsWKB_hElNxZWw0yyJT9OROnSF4NoqpUJWKQKM/edit?gid=0#gid=0" target="_blank" rel="noopener"><span>Flag Trip Data for Rides</span><small>পেন্ডিং ফ্ল্যাগ ট্রিপ ডেটা</small></a>
-</div>
-<h3>ইন্টারনাল টুলস তালিকা</h3>
-<div class="tool-grid">
-<a class="tool-card" href="https://enlist.pathaointernal.com/login" target="_blank" rel="noopener"><span class="tool-name">Enlist</span><span class="tool-url">enlist.pathaointernal.com</span></a>
-<a class="tool-card" href="https://er-beta.pathaointernal.com/user-search" target="_blank" rel="noopener"><span class="tool-name">Engine Room</span><span class="tool-url">er-beta.pathaointernal.com</span></a>
-<a class="tool-card" href="https://pathao.idesk360.com/auth" target="_blank" rel="noopener"><span class="tool-name">Idesk</span><span class="tool-url">pathao.idesk360.com</span></a>
-<a class="tool-card" href="https://quest-v3.pathaointernal.com/?redirectFrom=%2Fquest-activation" target="_blank" rel="noopener"><span class="tool-name">Quest Dashboard</span><span class="tool-url">quest-v3.pathaointernal.com</span></a>
-<a class="tool-card" href="https://talk.pathaolabs.com/one-pathao/channels/town-square" target="_blank" rel="noopener"><span class="tool-name">Pathao Talk</span><span class="tool-url">talk.pathaolabs.com</span></a>
-<a class="tool-card" href="https://garikoi.pathaointernal.com/" target="_blank" rel="noopener"><span class="tool-name">Gari Koi</span><span class="tool-url">garikoi.pathaointernal.com</span></a>
-<a class="tool-card" href="http://192.168.1.90/datum/index.php" target="_blank" rel="noopener"><span class="tool-name">Datum</span><span class="tool-url">192.168.1.90/datum</span></a>
-<a class="tool-card" href="https://tickets.pathaointernal.com/app/accounts/1/dashboard" target="_blank" rel="noopener"><span class="tool-name">Chatwoot</span><span class="tool-url">tickets.pathaointernal.com</span></a>
-</div>
 `;
 
 TOPICS[6].html.en = `
-<p class="lead">The digital and Pay Later payment flows, all SOP links, and the internal tools used in day-to-day work.</p>
+<p class="lead">The complete payment flow for digital, Pay Later, and due payments.</p>
 <h3>Final Payment Options by Initial Payment Method</h3>
 <div class="table-wrap"><table class="cx-table">
 <thead><tr><th>Initial Payment Method</th><th>Final Payment Method</th></tr></thead>
@@ -1041,6 +1031,32 @@ TOPICS[6].html.en = `
 <div class="flow">
 <div class="flow-step"><span class="flow-num">1</span><div><h4>PAYMENT</h4><p>Payment is requested from the Drive app and sent to bKash, Rocket, or a OneBank ATM.</p></div></div>
 </div>
+`;
+
+TOPICS[7].html.bn = `
+<p class="lead">প্রতিদিনের কাজের জন্য প্রয়োজনীয় সকল SOP লিংক এবং ইন্টারনাল টুলসের তালিকা।</p>
+<h3>সকল SOP</h3>
+<div class="link-grid">
+<a class="link-card" href="https://docs.google.com/spreadsheets/d/1J8dOd8iXyBzQafpQS-2NDt5EvlLCE0Pc0lxRkcozspc/edit?pli=1&gid=1275837616#gid=1275837616" target="_blank" rel="noopener"><span>Driver SOP</span><small>Rides Merged SOP</small></a>
+<a class="link-card" href="https://docs.google.com/spreadsheets/d/1iv2mUrA_DEbj03bPWOHwrzxionkqYsCp7aAkm7N5avs/edit?gid=925150589#gid=925150589" target="_blank" rel="noopener"><span>User SOP</span><small>Bike / Car / Parcel / CNG</small></a>
+<a class="link-card" href="https://docs.google.com/spreadsheets/d/10aewHdiWp0rd57hE3Pi1r30O549xlVBWfZDHuytpG1k/edit?gid=302837988#gid=302837988" target="_blank" rel="noopener"><span>Rides Flag Dashboard</span><small>ফ্ল্যাগ ট্রিপ ট্র্যাকিং</small></a>
+<a class="link-card" href="https://docs.google.com/spreadsheets/d/17RRkdGsWKB_hElNxZWw0yyJT9OROnSF4NoqpUJWKQKM/edit?gid=0#gid=0" target="_blank" rel="noopener"><span>Flag Trip Data for Rides</span><small>পেন্ডিং ফ্ল্যাগ ট্রিপ ডেটা</small></a>
+</div>
+<h3>ইন্টারনাল টুলস তালিকা</h3>
+<div class="tool-grid">
+<a class="tool-card" href="https://enlist.pathaointernal.com/login" target="_blank" rel="noopener"><span class="tool-name">Enlist</span><span class="tool-url">enlist.pathaointernal.com</span></a>
+<a class="tool-card" href="https://er-beta.pathaointernal.com/user-search" target="_blank" rel="noopener"><span class="tool-name">Engine Room</span><span class="tool-url">er-beta.pathaointernal.com</span></a>
+<a class="tool-card" href="https://pathao.idesk360.com/auth" target="_blank" rel="noopener"><span class="tool-name">Idesk</span><span class="tool-url">pathao.idesk360.com</span></a>
+<a class="tool-card" href="https://quest-v3.pathaointernal.com/?redirectFrom=%2Fquest-activation" target="_blank" rel="noopener"><span class="tool-name">Quest Dashboard</span><span class="tool-url">quest-v3.pathaointernal.com</span></a>
+<a class="tool-card" href="https://talk.pathaolabs.com/one-pathao/channels/town-square" target="_blank" rel="noopener"><span class="tool-name">Pathao Talk</span><span class="tool-url">talk.pathaolabs.com</span></a>
+<a class="tool-card" href="https://garikoi.pathaointernal.com/" target="_blank" rel="noopener"><span class="tool-name">Gari koi</span><span class="tool-url">garikoi.pathaointernal.com</span></a>
+<a class="tool-card" href="http://192.168.1.90/datum/index.php" target="_blank" rel="noopener"><span class="tool-name">Datum</span><span class="tool-url">192.168.1.90/datum</span></a>
+<a class="tool-card" href="https://tickets.pathaointernal.com/app/accounts/1/dashboard" target="_blank" rel="noopener"><span class="tool-name">Chatwoot</span><span class="tool-url">tickets.pathaointernal.com</span></a>
+</div>
+`;
+
+TOPICS[7].html.en = `
+<p class="lead">List of all essential SOP links and internal tools used in day-to-day work.</p>
 <h3>All SOPs</h3>
 <div class="link-grid">
 <a class="link-card" href="https://docs.google.com/spreadsheets/d/1J8dOd8iXyBzQafpQS-2NDt5EvlLCE0Pc0lxRkcozspc/edit?pli=1&gid=1275837616#gid=1275837616" target="_blank" rel="noopener"><span>Driver SOP</span><small>Rides Merged SOP</small></a>
@@ -1055,7 +1071,7 @@ TOPICS[6].html.en = `
 <a class="tool-card" href="https://pathao.idesk360.com/auth" target="_blank" rel="noopener"><span class="tool-name">Idesk</span><span class="tool-url">pathao.idesk360.com</span></a>
 <a class="tool-card" href="https://quest-v3.pathaointernal.com/?redirectFrom=%2Fquest-activation" target="_blank" rel="noopener"><span class="tool-name">Quest Dashboard</span><span class="tool-url">quest-v3.pathaointernal.com</span></a>
 <a class="tool-card" href="https://talk.pathaolabs.com/one-pathao/channels/town-square" target="_blank" rel="noopener"><span class="tool-name">Pathao Talk</span><span class="tool-url">talk.pathaolabs.com</span></a>
-<a class="tool-card" href="https://garikoi.pathaointernal.com/" target="_blank" rel="noopener"><span class="tool-name">Gari Koi</span><span class="tool-url">garikoi.pathaointernal.com</span></a>
+<a class="tool-card" href="https://garikoi.pathaointernal.com/" target="_blank" rel="noopener"><span class="tool-name">Gari koi</span><span class="tool-url">garikoi.pathaointernal.com</span></a>
 <a class="tool-card" href="http://192.168.1.90/datum/index.php" target="_blank" rel="noopener"><span class="tool-name">Datum</span><span class="tool-url">192.168.1.90/datum</span></a>
 <a class="tool-card" href="https://tickets.pathaointernal.com/app/accounts/1/dashboard" target="_blank" rel="noopener"><span class="tool-name">Chatwoot</span><span class="tool-url">tickets.pathaointernal.com</span></a>
 </div>

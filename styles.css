@@ -1,279 +1,331 @@
+/* ==========================================
+   Pathao CX Training Material - Premium Theme
+   ========================================== */
+
 :root {
-  --pathao-red: #E11D2A;
-  --pathao-red-hover: #C1121F;
-  --pathao-black: #1A1A1A;
-  --bg-light: #F8F9FA;
-  --card-bg: #FFFFFF;
-  --text-dark: #2B2D42;
-  --text-muted: #6C757D;
-  --border-color: #E9ECEF;
-  --shadow-sm: 0 4px 6px rgba(0,0,0,0.05);
-  --shadow-lg: 0 10px 25px rgba(225, 29, 42, 0.15);
+  --primary: #e11931;       /* Pathao Red */
+  --primary-hover: #c01227;
+  --bg-color: #f4f6f9;
+  --card-bg: #ffffff;
+  --text-dark: #1e293b;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --shadow-sm: 0 4px 6px -1px rgba(0,0,0,0.05);
+  --shadow-lg: 0 10px 25px -5px rgba(225, 25, 49, 0.12), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  --radius: 16px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 
 body {
-  background-color: var(--bg-light);
+  background-color: var(--bg-color);
   color: var(--text-dark);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* Header */
-.header {
-  background: var(--pathao-black);
-  color: white;
-  padding: 15px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-}
-
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-}
-
-.ride-icon-logo {
-  color: var(--pathao-red);
-  font-size: 24px;
-}
-
-.brand-name {
-  font-size: 22px;
-  font-weight: 800;
-  letter-spacing: -0.5px;
-}
-
-.brand-name small {
-  color: var(--pathao-red);
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.lang-btn {
-  background: transparent;
-  border: 1px solid var(--pathao-red);
-  color: white;
-  padding: 6px 14px;
-  border-radius: 20px;
-  cursor: pointer;
-  margin-left: 5px;
-  transition: all 0.3s;
-}
-
-.lang-btn.active, .lang-btn:hover {
-  background: var(--pathao-red);
-}
-
-/* Page Views System */
+/* ==========================================
+   1. VIEW SWITCHER FIX (মূল সমস্যার সমাধান)
+   ========================================== */
 .view {
-  display: none;
+  display: none !important; /* ডিফল্টভাবে সব ভিউ লুকিয়ে রাখা */
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
   padding: 40px 20px;
   flex: 1;
 }
 
 .view.active-view {
-  display: block;
-  animation: fadeIn 0.4s ease-in-out;
+  display: block !important; /* শুধুমাত্র একটি ভিউ দেখাবে */
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* Hero / Welcome Page */
-#welcome-view {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  min-height: 80vh;
-}
-
-.hero-card {
-  background: var(--card-bg);
-  padding: 50px 30px;
-  border-radius: 20px;
-  max-width: 650px;
-  width: 100%;
-  box-shadow: var(--shadow-lg);
-  border-top: 5px solid var(--pathao-red);
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-card h1 {
-  font-size: 28px;
-  color: var(--pathao-black);
-  margin-bottom: 15px;
-}
-
-.hero-card p {
-  color: var(--text-muted);
-  margin-bottom: 35px;
-  font-size: 16px;
-}
-
-/* Bike Animation */
-.animation-track {
-  height: 60px;
-  width: 100%;
-  position: relative;
-  margin-bottom: 20px;
-  border-bottom: 2px dashed #DDD;
-}
-
-.animated-bike {
-  font-size: 32px;
-  color: var(--pathao-red);
-  position: absolute;
-  bottom: 5px;
-  left: 0;
-  animation: rideBike 4s linear infinite;
-}
-
-@keyframes rideBike {
-  0% { left: -10%; transform: scaleX(1); }
-  48% { transform: scaleX(1); }
-  50% { left: 100%; transform: scaleX(-1); }
-  98% { transform: scaleX(-1); }
-  100% { left: -10%; transform: scaleX(1); }
-}
-
-/* Buttons */
-.primary-btn {
-  background: var(--pathao-red);
-  color: white;
-  border: none;
-  padding: 14px 32px;
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: transform 0.2s, background 0.3s;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.primary-btn:hover {
-  background: var(--pathao-red-hover);
-  transform: translateY(-2px);
-}
-
-.back-btn {
-  background: none;
-  border: none;
-  color: var(--pathao-red);
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  margin-bottom: 15px;
-}
-
-/* Grid Layout for Topics */
 .container {
   max-width: 1100px;
   margin: 0 auto;
 }
 
+/* ==========================================
+   2. HEADER / NAVBAR DESIGN
+   ========================================== */
+.header {
+  background: var(--card-bg);
+  height: 70px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.ride-icon-logo {
+  font-size: 24px;
+  color: var(--primary);
+}
+
+.brand-name {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: -0.5px;
+}
+
+.brand-name small {
+  color: var(--text-dark);
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+.lang-switch {
+  background: #f1f5f9;
+  padding: 4px;
+  border-radius: 30px;
+  display: flex;
+  gap: 2px;
+}
+
+.lang-btn {
+  border: none;
+  background: transparent;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.lang-btn.active {
+  background: var(--primary);
+  color: white;
+  box-shadow: 0 2px 8px rgba(225, 25, 49, 0.3);
+}
+
+/* ==========================================
+   3. HERO / WELCOME VIEW DESIGN
+   ========================================== */
+#welcome-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-card {
+  background: var(--card-bg);
+  max-width: 650px;
+  margin: 40px auto;
+  padding: 50px 40px;
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(225, 25, 49, 0.08);
+}
+
+.animation-track {
+  width: 70px;
+  height: 70px;
+  background: #fef2f2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+
+.animated-bike {
+  font-size: 32px;
+  color: var(--primary);
+}
+
+.hero-card h1 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: var(--text-dark);
+}
+
+.hero-card p {
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.primary-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(225, 25, 49, 0.3);
+}
+
+.primary-btn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(225, 25, 49, 0.4);
+}
+
+/* ==========================================
+   4. TOPICS GRID VIEW DESIGN
+   ========================================== */
 .view-header {
   margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.view-header h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.back-btn {
+  background: white;
+  border: 1px solid var(--border-color);
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.back-btn:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
 }
 
 .topics-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
 }
 
-.topic-tile {
+.topic-card {
   background: var(--card-bg);
-  padding: 25px;
-  border-radius: 12px;
-  border-left: 4px solid var(--pathao-red);
-  box-shadow: var(--shadow-sm);
+  padding: 24px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
   cursor: pointer;
-  transition: all 0.3s;
+  transition: var(--transition);
   display: flex;
-  align-items: center;
-  gap: 15px;
+  flex-direction: column;
+  gap: 16px;
 }
 
-.topic-tile:hover {
+.topic-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
-  background: #FFF5F5;
+  border-color: var(--primary);
 }
 
-.tile-icon {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: rgba(225, 29, 42, 0.1);
-  color: var(--pathao-red);
+.topic-card-icon {
+  width: 48px;
+  height: 48px;
+  background: #fef2f2;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--primary);
   font-size: 20px;
 }
 
-.tile-title {
-  font-size: 16px;
+.topic-card-content span.topic-num {
+  font-size: 12px;
   font-weight: 700;
-  color: var(--pathao-black);
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-/* Detail View Tabs */
-.tabs-container {
-  display: flex;
-  gap: 10px;
-  overflow-x: auto;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
+.topic-card-content h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 6px 0;
+  color: var(--text-dark);
 }
 
-.tab-btn {
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  white-space: nowrap;
-  font-weight: 600;
+.topic-card-content p {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
 }
 
-.tab-btn.active {
-  background: var(--pathao-red);
-  color: white;
-  border-color: var(--pathao-red);
-}
-
+/* ==========================================
+   5. DETAIL VIEW & CONTENT
+   ========================================== */
 .content-box {
   background: var(--card-bg);
-  padding: 30px;
-  border-radius: 12px;
+  padding: 40px;
+  border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
-  line-height: 1.6;
+  border: 1px solid var(--border-color);
+  min-height: 400px;
+  line-height: 1.7;
 }
 
-.card-animation {
-  animation: slideUp 0.3s ease-out;
+/* Inner Tabs Styling */
+.tabs-inner-nav {
+  display: flex;
+  gap: 10px;
+  border-bottom: 2px solid var(--border-color);
+  margin-bottom: 24px;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.tin-btn {
+  background: transparent;
+  border: none;
+  padding: 12px 20px;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  transition: var(--transition);
 }
 
-@keyframes slideUp {
-  from { opacity: 0; transform: translateY(15px); }
-  to { opacity: 1; transform: translateY(0); }
+.tin-btn.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+.tin-pane {
+  display: none;
+}
+
+.tin-pane.active {
+  display: block;
 }

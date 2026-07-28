@@ -1060,5 +1060,3 @@ TOPICS[6].html.en = `
 <a class="tool-card" href="https://tickets.pathaointernal.com/app/accounts/1/dashboard" target="_blank" rel="noopener"><span class="tool-name">Chatwoot</span><span class="tool-url">tickets.pathaointernal.com</span></a>
 </div>
 `;
-
-```

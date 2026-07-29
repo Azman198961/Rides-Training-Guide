@@ -333,95 +333,173 @@
     </div>
   </div>
 
-  <script>
-    // Data Storage for Topics 9 and 10
-    const topicData = {
-      9: {
-        title: "TOPIC 09: পার্সেল সার্ভিস (Parcel Service)",
-        content: `
-          <h3>১. পার্সেল ডেলিভারি ওভারভিউ</h3>
-          <p style="margin-bottom: 15px;">পাঠাও পার্সেল সার্ভিসের মাধ্যমে দ্রুত ও নিরাপদে শহরজুড়ে পণ্য আদান-প্রদান নিশ্চিত করা হয়।</p>
-          
-          <h3>২. সার্ভিস সংক্রান্ত নির্দেশনা</h3>
-          <ul style="margin-left: 20px; margin-bottom: 15px;">
-            <li>সর্বোচ্চ ওজন সীমা: নির্ধারিত স্ট্যান্ডার্ড ওজন পলি/পার্সেল সাইজ অনুযায়ী।</li>
-            <li>নিষিদ্ধ বস্তু: দাহ্য পদার্থ, অবৈধ বস্তু ও ক্ষতিকর তরল বহন সম্পূর্ণ নিষেধ।</li>
-            <li>পিকআপ ও ড্রপ-অফ SOP: কাস্টমারের থেকে পার্সেল গ্রহণের পর কোড যাচাইকরণ বাধ্যতামূলক।</li>
-          </ul>
+ <script>
+  // Data Storage for All Topics (1 to 10)
+  const topicData = {
+    1: {
+      title: "TOPIC 01: রাইডার জয়েনিং প্রক্রিয়া",
+      content: `
+        <h3>১. প্রয়োজনীয় যোগ্যতা ও কাগজপত্র</h3>
+        <ul style="margin-left: 20px; margin-bottom: 15px;">
+          <li>স্মার্টফোন ও সচল এনআইডি (NID) কার্ড।</li>
+          <li>বৈধ ড্রাইভিং লাইসেন্স এবং বাইকের রেজিস্ট্রেশন ও ট্যাক্স টোকেন।</li>
+        </ul>
+        <h3>২. রেজিস্ট্রেশন ধাপসমূহ</h3>
+        <p>পাঠাও ড্রাইভ অ্যাপ ডাউনলোড করে প্রয়োজনীয় কাগজপত্র আপলোড করুন এবং অনলাইন ট্রেইনিং সম্পন্ন করুন।</p>
+      `
+    },
+    2: {
+      title: "TOPIC 02: জয়েনিং বোনাস ও রেফারেল প্রোগ্রাম",
+      content: `
+        <h3>১. জয়েনিং বোনাস</h3>
+        <p style="margin-bottom: 15px;">নতুন রাইডার হিসেবে প্রথম সপ্তাহের নির্দিষ্ট সংখ্যক ট্রিপ সম্পন্ন করলে বোনাস প্রযোজ্য।</p>
+        <h3>২. রেফারেল প্রোগ্রাম</h3>
+        <p>অন্য কোনো রাইডারকে আপনার রেফারেল কোড দিয়ে জয়েন করালে এবং তিনি নির্দিষ্ট ট্রিপ সম্পন্ন করলে আপনি ও নতুন রাইডার উভয়ই রেফারেল বোনাস পাবেন।</p>
+      `
+    },
+    3: {
+      title: "TOPIC 03: স্টার প্রোগ্রাম",
+      content: `
+        <h3>১. স্টার টায়ার সার্ভিস</h3>
+        <p style="margin-bottom: 15px;">রাইডারদের পারফরম্যান্স, এক্সেপ্টেন্স রেট ও কাস্টমার রেটিংয়ের ওপর ভিত্তি করে লেভেল নির্ধারিত হয়:</p>
+        <ul style="margin-left: 20px; margin-bottom: 15px;">
+          <li><b>প্লাটিনাম (Platinum):</b> সর্বোচ্চ সুবিধা ও কম কমিশন সুবিধা।</li>
+          <li><b>গোল্ড (Gold):</b> মাঝারি লেভেলের বোনাস ও সুবিধা।</li>
+          <li><b>সিলভার (Silver):</b> বেসিক সুবিধা।</li>
+        </ul>
+      `
+    },
+    4: {
+      title: "TOPIC 04: ভাড়া তথ্য",
+      content: `
+        <h3>১. ভাড়া নির্ধারণ পদ্ধতি</h3>
+        <p style="margin-bottom: 15px;">বেস ফেয়ার + দূরত্বভিত্তিক ভাড়া + সময়ভিত্তিক ভাড়ার ওপর ভিত্তি করে মোট ভাড়া নির্ধারিত হয়।</p>
+        <h3>২. সার্ভিস ভিত্তিক ভাড়া</h3>
+        <p>পার্সেল, বাইক ও কার সার্ভিসের জন্য আলাদা বেস ফেয়ার এবং প্রতি কিমি রেট প্রযোজ্য। পিক আওয়ারে সার্জ প্রাইস যুক্ত হতে পারে।</p>
+      `
+    },
+    5: {
+      title: "TOPIC 05: ডিউ ও পেমেন্ট",
+      content: `
+        <h3>১. ডিউ লিমিট (Due Limit)</h3>
+        <p style="margin-bottom: 15px;">ক্যাশ ট্রিপের মাধ্যমে সংগৃহীত পাঠাও সার্ভিস চার্জ একটি নির্দিষ্ট লিমিটে পৌঁছালে ডিউ পরিশোধ করতে হয়।</p>
+        <h3>২. ডিউ পরিশোধ পদ্ধতি</h3>
+        <p>বিকাশ, নগদ বা ডিজিটালি সরাসরি অ্যাপের মাধ্যমে ডিউ ক্লিয়ার করা যায়।</p>
+      `
+    },
+    6: {
+      title: "TOPIC 06: ফ্ল্যাগড ট্রিপ (Flagged Trip)",
+      content: `
+        <h3>১. ফ্ল্যাগড হওয়ার কারণ</h3>
+        <p style="margin-bottom: 15px;">অস্বাভাবিক ট্রিপ রুট, রাইড না দিয়ে ফেক ট্রিপ কমপ্লিট করা বা জিপিএস ম্যানিপুলেশনের কারণে ট্রিপ ফ্ল্যাগড হয়।</p>
+        <h3>২. রিভিউ ও আপিল প্রক্রিয়া</h3>
+        <p>ফ্ল্যাগড ট্রিপ সিস্টেম দ্বারা রিভিউর আওতায় আসে এবং জেনুইন প্রমাণিত হলে পেমেন্ট অ্যাডজাস্ট করা হয়।</p>
+      `
+    },
+    7: {
+      title: "TOPIC 07: পেমент ফ্লো",
+      content: `
+        <h3>১. ডিজিটাল পেমেন্ট ফ্লো</h3>
+        <p style="margin-bottom: 15px;">কাস্টমার বিকাশ বা কার্ডে পেমেন্ট করলে রাইডারের ওয়ালেটে ব্যালেন্স জমা হয়।</p>
+        <h3>২. পে-লেটার (Pay Later) ও ক্যাশ ট্রিপ</h3>
+        <p>ক্যাশ ট্রিপে কাস্টমারের কাছ থেকে নগদ টাকা সংগ্রহ করতে হয় এবং পাঠাও চার্জ ওয়ালেট থেকে অ্যাডজাস্ট হয়।</p>
+      `
+    },
+    8: {
+      title: "TOPIC 08: SOP ও ইন্টারনাল টুলস",
+      content: `
+        <h3>১. ইন্টারনাল SOP লিংক</h3>
+        <p style="margin-bottom: 15px;">এজেন্টদের জন্য জরুরি SOP ডকুমেন্টস ও গাইডলাইন বুকমার্ক করে রাখুন।</p>
+        <h3>২. ইন্টারনাল টুলস হ্যান্ডলিং</h3>
+        <p>কাস্টমার ইস্যু দ্রুত সমাধানের জন্য টিকিটিং সিস্টেম ও অ্যাডমিন প্যানেল ব্যবহারের স্ট্যান্ডার্ড গাইডলাইন মানুন।</p>
+      `
+    },
+    9: {
+      title: "TOPIC 09: পার্সেল সার্ভিস (Parcel Service)",
+      content: `
+        <h3>১. পার্সেল ডেলিভারি ওভারভিউ</h3>
+        <p style="margin-bottom: 15px;">পাঠাও পার্সেল সার্ভিসের মাধ্যমে দ্রুত ও নিরাপদে শহরজুড়ে পণ্য আদান-প্রদান নিশ্চিত করা হয়।</p>
+        
+        <h3>২. সার্ভিস সংক্রান্ত নির্দেশনা</h3>
+        <ul style="margin-left: 20px; margin-bottom: 15px;">
+          <li>সর্বোচ্চ ওজন সীমা: নির্ধারিত স্ট্যান্ডার্ড ওজন পলি/পার্সেল সাইজ অনুযায়ী।</li>
+          <li>নিষিদ্ধ বস্তু: দাহ্য পদার্থ, অবৈধ বস্তু ও ক্ষতিকর তরল বহন সম্পূর্ণ নিষেধ।</li>
+          <li>পিকআপ ও ড্রপ-অফ SOP: কাস্টমারের থেকে পার্সেল গ্রহণের পর কোড যাচাইকরণ বাধ্যতামূলক।</li>
+        </ul>
 
-          <h3>৩. পার্সেল ড্যামেজ ও রিটার্ন নীতি</h3>
-          <p>পার্সেল ক্ষতিগ্রস্ত হলে বা ডেলিভারি করতে না পারলে নির্ধারিত সময়ের মধ্যে রিটার্ন হাব বা কাস্টমারের কাছে পৌঁছে দিতে হবে।</p>
-        `
-      },
-      10: {
-        title: "TOPIC 10: QA Parameter (কোয়ালিটি অ্যাসিওরেন্স প্যারামিটার)",
-        content: `
-          <p style="margin-bottom: 15px;">কাস্টমার সাপোর্ট সার্ভিস উন্নত করতে নিম্নের প্যারামিটারগুলোতে কল/চ্যাট মূল্যায়ন করা হয়:</p>
-          
-          <table>
-            <thead>
-              <tr>
-                <th>প্যারামিটার (Parameter)</th>
-                <th>বিবরণ (Description)</th>
-                <th>ওয়েটেজ/স্কোর (Weightage)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Greeting & Professionalism</td>
-                <td>সঠিকভাবে সম্ভাষণ করা এবং পেশাদার আচরণ বজায় রাখা</td>
-                <td>15%</td>
-              </tr>
-              <tr>
-                <td>Active Listening & Empathy</td>
-                <td>কাস্টমারের সমস্যা মনোযোগ দিয়ে শোনা এবং সহানুভূতি প্রকাশ করা</td>
-                <td>20%</td>
-              </tr>
-              <tr>
-                <td>Correct Information & SOP</td>
-                <td>সঠিক তথ্য প্রদান এবং নির্দিষ্ট SOP অনুসরণ করা</td>
-                <td>35%</td>
-              </tr>
-              <tr>
-                <td>Resolution & Hold Procedure</td>
-                <td>যথাযথ সমাধান দেওয়া এবং সঠিক নিয়ম মেনে হোল্ডে নেওয়া</td>
-                <td>20%</td>
-              </tr>
-              <tr>
-                <td>Closing & Call Etiquette</td>
-                <td>সুন্দরভাবে কল সমাপ্ত করা</td>
-                <td>10%</td>
-              </tr>
-            </tbody>
-          </table>
-        `
-      }
-    };
+        <h3>৩. পার্সেল ড্যামেজ ও রিটার্ন নীতি</h3>
+        <p>পার্সেল ক্ষতিগ্রস্ত হলে বা ডেলিভারি করতে না পারলে নির্ধারিত সময়ের মধ্যে রিটার্ন হাব বা কাস্টমারের কাছে পৌঁছে দিতে হবে।</p>
+      `
+    },
+    10: {
+      title: "TOPIC 10: QA Parameter (কোয়ালিটি অ্যাসিওরেন্স প্যারামিটার)",
+      content: `
+        <p style="margin-bottom: 15px;">কাস্টমার সাপোর্ট সার্ভিস উন্নত করতে নিম্নের প্যারামিটারগুলোতে কল/চ্যাট মূল্যায়ন করা হয়:</p>
+        
+        <table>
+          <thead>
+            <tr>
+              <th>প্যারামিটার (Parameter)</th>
+              <th>বিবরণ (Description)</th>
+              <th>ওয়েটেজ/স্কোর (Weightage)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Greeting & Professionalism</td>
+              <td>সঠিকভাবে সম্ভাষণ করা এবং পেশাদার আচরণ বজায় রাখা</td>
+              <td>15%</td>
+            </tr>
+            <tr>
+              <td>Active Listening & Empathy</td>
+              <td>কাস্টমারের সমস্যা মনোযোগ দিয়ে শোনা এবং সহানুভূতি প্রকাশ করা</td>
+              <td>20%</td>
+            </tr>
+            <tr>
+              <td>Correct Information & SOP</td>
+              <td>সঠিক তথ্য প্রদান এবং নির্দিষ্ট SOP অনুসরণ করা</td>
+              <td>35%</td>
+            </tr>
+            <tr>
+              <td>Resolution & Hold Procedure</td>
+              <td>যথাযথ সমাধান দেওয়া এবং সঠিক নিয়ম মেনে হোল্ডে নেওয়া</td>
+              <td>20%</td>
+            </tr>
+            <tr>
+              <td>Closing & Call Etiquette</td>
+              <td>সুন্দরভাবে কল সমাপ্ত করা</td>
+              <td>10%</td>
+            </tr>
+          </tbody>
+        </table>
+      `
+    }
+  };
 
-    function openTopic(id) {
-      const modal = document.getElementById('infoModal');
-      const body = document.getElementById('modalBody');
+  function openTopic(id) {
+    const modal = document.getElementById('infoModal');
+    const body = document.getElementById('modalBody');
 
-      if (topicData[id]) {
-        body.innerHTML = `<h2>${topicData[id].title}</h2><br>` + topicData[id].content;
-      } else {
-        body.innerHTML = `<h2>TOPIC 0${id}</h2><br><p>এই টপিকের বিস্তারিত তথ্য লোড হচ্ছে...</p>`;
-      }
-
-      modal.style.display = 'flex';
+    if (topicData[id]) {
+      body.innerHTML = `<h2>${topicData[id].title}</h2><br>` + topicData[id].content;
+    } else {
+      body.innerHTML = `<h2>TOPIC 0${id}</h2><br><p>এই টপিকের বিস্তারিত তথ্য লোড হচ্ছে...</p>`;
     }
 
-    function closeModal() {
-      document.getElementById('infoModal').style.display = 'none';
-    }
+    modal.style.display = 'flex';
+  }
 
-    // Close modal on outer click
-    window.onclick = function(event) {
-      const modal = document.getElementById('infoModal');
-      if (event.target == modal) {
-        modal.style.display = 'none';
-      }
+  function closeModal() {
+    document.getElementById('infoModal').style.display = 'none';
+  }
+
+  // Close modal on outer click
+  window.onclick = function(event) {
+    const modal = document.getElementById('infoModal');
+    if (event.target == modal) {
+      modal.style.display = 'none';
     }
-  </script>
+  }
+</script>
 </body>
 </html>

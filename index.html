@@ -3,62 +3,425 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pathao Rides CX — ট্রেনিং ম্যাটেরিয়াল</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <title>Pathao CX Training Portal</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary-red: #e11938;
+      --bg-color: #f8f9fa;
+      --card-bg: #ffffff;
+      --text-dark: #2d3436;
+      --text-muted: #636e72;
+      --border-color: #edf2f7;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-dark);
+      padding-bottom: 50px;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: white;
+      padding: 15px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eaeaea;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-text {
+      color: var(--primary-red);
+      font-weight: 800;
+      font-size: 24px;
+    }
+
+    .cx-badge {
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+
+    .lang-toggle button {
+      padding: 6px 16px;
+      border: 1px solid transparent;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .btn-bn { background-color: var(--primary-red); color: white; }
+    .btn-en { background-color: #e2e8f0; color: #4a5568; }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .header-section {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .back-btn {
+      padding: 8px 16px;
+      background: white;
+      border: 1px solid #cbd5e0;
+      border-radius: 20px;
+      cursor: pointer;
+      color: var(--text-dark);
+      font-weight: 600;
+    }
+
+    .page-title {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    /* Topic Grid */
+    .topics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 20px;
+    }
+
+    .topic-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 24px;
+      border: 1px solid var(--border-color);
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .topic-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      border-color: #cbd5e0;
+    }
+
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      background: #ffebee;
+      color: var(--primary-red);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .card-content .topic-num {
+      color: var(--primary-red);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .card-content h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin: 4px 0 6px 0;
+    }
+
+    .card-content p {
+      color: var(--text-muted);
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    /* Modal for displaying Topic Details */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .modal-content {
+      background: white;
+      width: 90%;
+      max-width: 800px;
+      max-height: 85vh;
+      border-radius: 12px;
+      padding: 30px;
+      overflow-y: auto;
+      position: relative;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 24px;
+      cursor: pointer;
+      color: #a0aec0;
+    }
+
+    .modal-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    .modal-body th, .modal-body td {
+      border: 1px solid #e2e8f0;
+      padding: 10px 12px;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    .modal-body th {
+      background-color: #f7fafc;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="header">
-    <div class="logo-container" id="go-home">
-      <i class="fas fa-motorcycle ride-icon-logo"></i>
-      <div class="brand-name">pathao <small>CX</small></div>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo-container">
+      <span class="logo-text">pathao</span>
+      <span class="cx-badge">CX</span>
     </div>
-    <div class="lang-switch">
-      <button class="lang-btn active" id="lang-bn">বাংলা</button>
-      <button class="lang-btn" id="lang-en">English</button>
+    <div class="lang-toggle">
+      <button class="btn-bn">বাংলা</button>
+      <button class="btn-en">English</button>
     </div>
-  </header>
+  </div>
 
-  <!-- Welcome View -->
-  <main id="welcome-view" class="view active-view">
-    <div class="hero-card">
-      <div class="animation-track">
-        <i class="fas fa-motorcycle animated-bike"></i>
+  <!-- Main Content -->
+  <div class="container">
+    <div class="header-section">
+      <button class="back-btn"><i class="fa-solid font-awesome-icon fa-chevron-left"></i> হোম</button>
+      <h1 class="page-title">একটি ট্রেনিং টপিক নির্বাচন করুন</h1>
+    </div>
+
+    <!-- Topic Cards Grid -->
+    <div class="topics-grid">
+      <!-- Existing Topics 1-8 -->
+      <div class="topic-card" onclick="openTopic(1)">
+        <div class="card-icon"><i class="fa-solid fa-user-plus"></i></div>
+        <div class="card-content">
+          <span class="topic-num">TOPIC 01</span>
+          <h3>রাইডার জয়েনিং প্রক্রিয়া</h3>
+          <p>যোগ্যতা, কাগজপত্র ও রেজিস্ট্রেশন</p>
+        </div>
       </div>
-      <h1 id="welcome-title">পাঠাও রাইডস ট্রেনিং গাইডে স্বাগতম</h1>
-      <p id="welcome-subtitle">কাস্টমার এক্সপেরিয়েন্স, রাইড ফ্লো এবং ইন্টারনাল টুলস সহজে শিখুন।</p>
-      <button class="primary-btn" id="btn-choose-topic">
-        <span id="btn-text">টপিক নির্বাচন করুন</span>
-        <i class="fas fa-arrow-right"></i>
-      </button>
-    </div>
-  </main>
 
-  <!-- Topics Grid View -->
-  <main id="topics-view" class="view">
-    <div class="container">
-      <div class="view-header">
-        <button class="back-btn" id="back-to-home"><i class="fas fa-chevron-left"></i> হোম</button>
-        <h2 id="topics-title">একটি ট্রেনিং টপিক নির্বাচন করুন</h2>
+      <div class="topic-card" onclick="openTopic(2)">
+        <div class="card-icon"><i class="fa-solid fa-gift"></i></div>
+        <div class="card-content">
+          <span class="topic-num">TOPIC 02</span>
+          <h3>জয়েনিং বোনাস ও রেফারেল প্রোগ্রাম</h3>
+          <p>বাইক, কার ও পার্সেলের বোনাস কাঠামো</p>
+        </div>
       </div>
-      <div class="topics-grid" id="topics-grid"></div>
-    </div>
-  </main>
 
-  <!-- Detail Content View -->
-  <main id="detail-view" class="view">
-    <div class="container">
-      <div class="view-header">
-        <button class="back-btn" id="back-to-topics"><i class="fas fa-chevron-left"></i> সব টপিক</button>
-        <h2 id="detail-topic-title">টপিক শিরোনাম</h2>
+      <div class="topic-card" onclick="openTopic(3)">
+        <div class="card-icon"><i class="fa-solid fa-star"></i></div>
+        <div class="card-content">
+          <span class="topic-num">TOPIC 03</span>
+          <h3>স্টার প্রোগ্রাম</h3>
+          <p>প্লাটিনাম, গোল্ড ও সিলভার স্ট্যাটাস</p>
+        </div>
       </div>
-      <div class="content-box" id="content-display"></div>
-    </div>
-  </main>
 
-  <script src="data.js"></script>
-  <script src="app.js"></script>
+      <div class="topic-card" onclick="openTopic(4)">
+        <div class="card-icon"><i class="fa-solid fa-wallet"></i></div>
+        <div class="card-content">
+          <span class="topic-num">TOPIC 04</span>
+          <h3>ভাড়া তথ্য</h3>
+          <p>পার্সেল, বাইক ও কার সেবার ভাড়া কাঠামো</p>
+        </div>
+      </div>
+
+      <div class="topic-card" onclick="openTopic(5)">
+        <div class="card-icon"><i class="fa-solid fa-credit-card"></i></div>
+        <div class="card-content">
+          <span class="topic-num">TOPIC 05</span>
+          <h3>ডিউ ও পেমেন্ট</h3>
+          <p>ডিউ লিমিট ও পরিশোধ প্রক্রিয়া</p>
+        </div>
+      </div>
+
+      <div class="topic-card" onclick="openTopic(6)">
+        <div class="card-icon"><i class="fa-solid fa-flag"></i></div>
+        <div class="card-content">
+          <span class="topic-num">TOPIC 06</span>
+          <h3>ফ্ল্যাগড ট্রিপ</h3>
+          <p>কারণ, প্রতিরোধ ও রিভিউ প্রক্রিয়া</p>
+        </div>
+      </div>
+
+      <div class="topic-card" onclick="openTopic(7)">
+        <div class="card-icon"><i class="fa-solid fa-arrows-split-up-and-left"></i></div>
+        <div class="card-content">
+          <span class="topic-num">TOPIC 07</span>
+          <h3>পেমেন্ট ফ্লো</h3>
+          <p>ডিজিটাল, পে-লেটার ও ডিউ পেমেন্ট ফ্লো</p>
+        </div>
+      </div>
+
+      <div class="topic-card" onclick="openTopic(8)">
+        <div class="card-icon"><i class="fa-solid fa-toolbox"></i></div>
+        <div class="card-content">
+          <span class="topic-num">TOPIC 08</span>
+          <h3>SOP ও ইন্টারনাল টুলস</h3>
+          <p>জরুরি SOP লিংক ও ইন্টারনাল টুলস</p>
+        </div>
+      </div>
+
+      <!-- NEW TOPICS ADDED BELOW -->
+      
+      <!-- Topic 09: Parcel Service -->
+      <div class="topic-card" onclick="openTopic(9)">
+        <div class="card-icon"><i class="fa-solid fa-box"></i></div>
+        <div class="card-content">
+          <span class="topic-num">TOPIC 09</span>
+          <h3>পার্সেল সার্ভিস</h3>
+          <p>ডেলিভারি গাইডলাইন, রিটার্ন নীতি ও সার্ভিস সংক্রান্ত বিস্তারিত তথ্য</p>
+        </div>
+      </div>
+
+      <!-- Topic 10: QA Parameter -->
+      <div class="topic-card" onclick="openTopic(10)">
+        <div class="card-icon"><i class="fa-solid fa-list-check"></i></div>
+        <div class="card-content">
+          <span class="topic-num">TOPIC 10</span>
+          <h3>QA Parameter</h3>
+          <p>কোয়ালিটি অ্যাসিওরেন্স মানদণ্ড, কল ইভালুয়েশন ও স্কোরিং গাইড</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Details Modal Container -->
+  <div class="modal" id="infoModal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <div class="modal-body" id="modalBody">
+        <!-- Topic Content will be dynamically inserted here -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Data Storage for Topics 9 and 10
+    const topicData = {
+      9: {
+        title: "TOPIC 09: পার্সেল সার্ভিস (Parcel Service)",
+        content: `
+          <h3>১. পার্সেল ডেলিভারি ওভারভিউ</h3>
+          <p style="margin-bottom: 15px;">পাঠাও পার্সেল সার্ভিসের মাধ্যমে দ্রুত ও নিরাপদে শহরজুড়ে পণ্য আদান-প্রদান নিশ্চিত করা হয়।</p>
+          
+          <h3>২. সার্ভিস সংক্রান্ত নির্দেশনা</h3>
+          <ul style="margin-left: 20px; margin-bottom: 15px;">
+            <li>সর্বোচ্চ ওজন সীমা: নির্ধারিত স্ট্যান্ডার্ড ওজন পলি/পার্সেল সাইজ অনুযায়ী।</li>
+            <li>নিষিদ্ধ বস্তু: দাহ্য পদার্থ, অবৈধ বস্তু ও ক্ষতিকর তরল বহন সম্পূর্ণ নিষেধ।</li>
+            <li>পিকআপ ও ড্রপ-অফ SOP: কাস্টমারের থেকে পার্সেল গ্রহণের পর কোড যাচাইকরণ বাধ্যতামূলক।</li>
+          </ul>
+
+          <h3>৩. পার্সেল ড্যামেজ ও রিটার্ন নীতি</h3>
+          <p>পার্সেল ক্ষতিগ্রস্ত হলে বা ডেলিভারি করতে না পারলে নির্ধারিত সময়ের মধ্যে রিটার্ন হাব বা কাস্টমারের কাছে পৌঁছে দিতে হবে।</p>
+        `
+      },
+      10: {
+        title: "TOPIC 10: QA Parameter (কোয়ালিটি অ্যাসিওরেন্স প্যারামিটার)",
+        content: `
+          <p style="margin-bottom: 15px;">কাস্টমার সাপোর্ট সার্ভিস উন্নত করতে নিম্নের প্যারামিটারগুলোতে কল/চ্যাট মূল্যায়ন করা হয়:</p>
+          
+          <table>
+            <thead>
+              <tr>
+                <th>প্যারামিটার (Parameter)</th>
+                <th>বিবরণ (Description)</th>
+                <th>ওয়েটেজ/স্কোর (Weightage)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Greeting & Professionalism</td>
+                <td>সঠিকভাবে সম্ভাষণ করা এবং পেশাদার আচরণ বজায় রাখা</td>
+                <td>15%</td>
+              </tr>
+              <tr>
+                <td>Active Listening & Empathy</td>
+                <td>কাস্টমারের সমস্যা মনোযোগ দিয়ে শোনা এবং সহানুভূতি প্রকাশ করা</td>
+                <td>20%</td>
+              </tr>
+              <tr>
+                <td>Correct Information & SOP</td>
+                <td>সঠিক তথ্য প্রদান এবং নির্দিষ্ট SOP অনুসরণ করা</td>
+                <td>35%</td>
+              </tr>
+              <tr>
+                <td>Resolution & Hold Procedure</td>
+                <td>যথাযথ সমাধান দেওয়া এবং সঠিক নিয়ম মেনে হোল্ডে নেওয়া</td>
+                <td>20%</td>
+              </tr>
+              <tr>
+                <td>Closing & Call Etiquette</td>
+                <td>সুন্দরভাবে কল সমাপ্ত করা</td>
+                <td>10%</td>
+              </tr>
+            </tbody>
+          </table>
+        `
+      }
+    };
+
+    function openTopic(id) {
+      const modal = document.getElementById('infoModal');
+      const body = document.getElementById('modalBody');
+
+      if (topicData[id]) {
+        body.innerHTML = `<h2>${topicData[id].title}</h2><br>` + topicData[id].content;
+      } else {
+        body.innerHTML = `<h2>TOPIC 0${id}</h2><br><p>এই টপিকের বিস্তারিত তথ্য লোড হচ্ছে...</p>`;
+      }
+
+      modal.style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('infoModal').style.display = 'none';
+    }
+
+    // Close modal on outer click
+    window.onclick = function(event) {
+      const modal = document.getElementById('infoModal');
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+  </script>
 </body>
 </html>

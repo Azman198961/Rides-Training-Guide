@@ -62,6 +62,22 @@ const TOPICS = [
     title: { bn: "SOP ও ইন্টারনাল টুলস", en: "SOPs & Internal Tools" },
     subtitle: { bn: "জরুরি SOP লিংক ও ইন্টারনাল টুলস", en: "Essential SOP links & internal tools" },
     html: { bn: "", en: "" }
+  },
+  {
+    id: "parcel-service",
+    num: "09",
+    icon: "package",
+    title: { bn: "পার্সেল সার্ভিস", en: "Parcel Service" },
+    subtitle: { bn: "ডেলিভারি গাইডলাইন, রিটার্ন নীতি ও সার্ভিস সংক্রান্ত বিস্তারিত তথ্য", en: "Delivery guidelines, return policy & service details" },
+    html: { bn: "", en: "" }
+  },
+  {
+    id: "qa-parameter",
+    num: "10",
+    icon: "check-square",
+    title: { bn: "QA Parameter", en: "QA Parameter" },
+    subtitle: { bn: "কোয়ালিটি অ্যাসুরেন্স মানদণ্ড, কল ইভালুয়েশন ও স্কোরিং গাইড", en: "Quality assurance parameters, call evaluation & scoring guide" },
+    html: { bn: "", en: "" }
   }
 ];
 
@@ -264,7 +280,7 @@ TOPICS[1].html.bn = `
 <tbody>
 <tr><td>ঢাকা — Car Plus</td><td>১৫ দিনে ১০টি ট্রিপ</td><td>৩০০ টাকা</td><td>২৫০ টাকা</td></tr>
 <tr><td>ঢাকা — Car Prime</td><td>১৫ দিনে ১০টি ট্রিপ</td><td>৩০০ টাকা</td><td>৪০০ টাকা</td></tr>
-<tr><td>ঢাকা — Car Max</td><td>১৫ দিনে ১০টি ট্রিপ</td><td>৩০০ টাকা</td><td>৫০০ টাকা</td></tr>
+<tr><td>ঢাকা — Car Max</td><td>১৫ দিনে ১০টি ট্রিপ</td><td>৩০০ টাকা</td><td>৫০ও টাকা</td></tr>
 <tr><td>চট্টগ্রাম — Car Plus</td><td>১৫ দিনে ১০টি ট্রিপ</td><td>১,০০০ টাকা</td><td>১,০০০ টাকা</td></tr>
 </tbody></table></div>
 `;
@@ -1127,4 +1143,50 @@ TOPICS[7].html.en = `
     GariKoi
   </a>
 </div>
+`;
+
+TOPICS[8].html.bn = `
+<p class="lead">পার্সেল ডেলিভারির নীতি, রিটার্ন প্রক্রিয়া, প্যাকেজিং গাইডলাইন ও কাস্টমার সার্ভিস সম্পর্কিত বিস্তারিত তথ্য।</p>
+<h3>১. পার্সেল ডেলিভারি সময়সীমা ও নীতি</h3>
+<p>পার্সেল সার্ভিস ব্যবহারের ক্ষেত্রে পিকআপ থেকে ডেলিভারি পর্যন্ত নির্ধারিত গাইডলাইন ও নিয়মাবলি প্রযোজ্য।</p>
+<ul>
+<li><strong>পিকআপ সময়:</strong> অর্ডার কনফার্ম হওয়ার পর নির্ধারিত সময়ের মধ্যে রাইডার পিকআপ পয়েন্টে পৌঁছাবেন।</li>
+<li><strong>রিটার্ন নীতি:</strong> যদি গ্রাহক বা রিসিভার পার্সেল গ্রহণ করতে অস্বীকৃতি জানান বা সংযোগ না পাওয়া যায়, তবে পার্সেলটি মার্চেন্ট/সেন্ডারের কাছে ফেরত পাঠানো হবে।</li>
+<li><strong>নিষেধাজ্ঞা:</strong> অবৈধ বা বিপজ্জনক বস্তু (যেমন: বিস্ফোরক, অবৈধ মাদক, অস্ত্র) পার্সেল হিসেবে পাঠানো সম্পূর্ণ নিষিদ্ধ।</li>
+</ul>
+`;
+
+TOPICS[8].html.en = `
+<p class="lead">Detailed information on parcel delivery guidelines, return policies, packaging standards, and service info.</p>
+<h3>1. Parcel Delivery Guidelines & Policy</h3>
+<p>Standard guidelines and rules apply from pickup to delivery when using the Parcel Service.</p>
+<ul>
+<li><strong>Pickup Timeline:</strong> Once the order is confirmed, the rider will arrive at the pickup location within the designated timeframe.</li>
+<li><strong>Return Policy:</strong> If the receiver refuses to accept the parcel or is unreachable, the parcel will be returned to the merchant/sender.</li>
+<li><strong>Prohibited Items:</strong> Sending illegal or hazardous items (e.g., explosives, contraband, weapons) via parcel is strictly forbidden.</li>
+</ul>
+`;
+
+TOPICS[9].html.bn = `
+<p class="lead">কোয়ালিটি অ্যাসুরেন্স (QA) মানদণ্ড, এজেন্টদের জন্য কল ইভালুয়েশন প্রসেস এবং স্কোরিং গাইডলাইন।</p>
+<h3>১. কল ইভালুয়েশন প্যারামিটার</h3>
+<p>কাস্টমার সার্ভিস প্রতিনিধির পারফরম্যান্স মূল্যায়নের জন্য নিম্নলিখিত প্যারামিটারসমূহ ব্যবহৃত হয়:</p>
+<ul>
+<li><strong>প্রফেশনালিজম ও অভিবাদন (Greeting):</strong> যথাযথ পেশাদারিত্ব ও সৌজন্যমূলক সম্ভাষণ।</li>
+<li><strong>সঠিক তথ্য প্রদান (Accuracy):</strong> SOP অনুযায়ী নির্ভুল ও সঠিক তথ্য শেয়ার করা।</li>
+<li><strong>সক্রিয় শ্রবণ ও মনোযোগ (Active Listening):</strong> কাস্টমারের সমস্যা মন দিয়ে শোনা এবং ধৈর্যশীল আচরণ।</li>
+<li><strong>দ্রুত সমাধান (Problem Solving):</strong> সময়মত ও সঠিক প্রক্রিয়ায় টিকিটিং বা সমস্যা সমাধান সম্পন্ন করা।</li>
+</ul>
+`;
+
+TOPICS[9].html.en = `
+<p class="lead">Quality Assurance (QA) parameters, agent call evaluation process, and scoring guidelines.</p>
+<h3>1. Call Evaluation Parameters</h3>
+<p>The following parameters are evaluated during customer service agent interactions:</p>
+<ul>
+<li><strong>Professionalism & Greeting:</strong> Proper professional etiquette and polite greetings.</li>
+<li><strong>Information Accuracy:</strong> Providing precise information strictly adhering to SOPs.</li>
+<li><strong>Active Listening:</strong> Attentively listening to the customer's issues and maintaining patience.</li>
+<li><strong>Resolution & Efficiency:</strong> Swift problem solving and accurate ticket logging.</li>
+</ul>
 `;

@@ -260,7 +260,7 @@ TOPICS[1].html.bn = `
 <div class="table-wrap"><table class="cx-table">
 <thead><tr><th>সময়কাল</th><th>শর্ত</th><th>বোনাস</th></tr></thead>
 <tbody>
-<tr><td>প্রথম ৩ দিন</td><td>৩টি ট্রিপ</td><td>৫০০ টাকা</td></tr>
+<tr><td>প্রথম ৩ দিন</td><td>৩টি ট্রিপ</td><td>৫০ও টাকা</td></tr>
 <tr><td>প্রথম ২০ দিন</td><td>৩০টি ট্রিপ</td><td>২,০০০ টাকা</td></tr>
 <tr><td>পরবর্তী ২০ দিন</td><td>৪৫টি ট্রিপ</td><td>২,২০০ টাকা</td></tr>
 <tr><td>প্রথম ৪০ দিন</td><td>—</td><td>১০% কমিশনে ট্রিপ শেয়ার করার সুযোগ</td></tr>

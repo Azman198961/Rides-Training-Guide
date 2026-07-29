@@ -1034,41 +1034,97 @@ TOPICS[6].html.en = `
 `;
 
 TOPICS[7].html.bn = `
-<p class="lead">প্রতিদিনের কাজের জন্য প্রয়োজনীয় সকল SOP লিংক এবং ইন্টারনাল টুলসের তালিকা।</p>
+<p class="lead">প্রতিদিনের কাজের জন্য প্রয়োজনীয় সকল SOP লিংক এবং ইন্টারনাল টুলসের তালিকা।</p>
+
 <h3>সকল SOP</h3>
-<div class="link-grid">
-<a class="link-card" href="https://docs.google.com/spreadsheets/d/1iv2mUrA_DEbj03bPWOHwrzxionkqYsCp7aAkm7N5avs/edit?gid=925150589#gid=925150589" target="_blank" rel="noopener"><span>User SOPs</span><small>Bike / Car / Parcel / CNG</small></a>
-<a class="link-card" href="https://docs.google.com/spreadsheets/d/1J8dOd8iXyBzQafpQS-2NDt5EvlLCE0Pc0lxRkcozspc/edit?pli=1&gid=1275837616#gid=1275837616" target="_blank" rel="noopener"><span>Driver SOPs</span><small>Rides Merged SOP</small></a>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 25px;">
+  <a href="https://docs.google.com/spreadsheets/d/1iv2mUrA_DEbj03bPWOHwrzxionkqYsCp7aAkm7N5avs/edit?gid=925150589#gid=925150589" target="_blank" rel="noopener" style="display: flex; flex-direction: column; padding: 16px; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; text-decoration: none; color: #1e293b; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    <strong style="font-size: 16px; color: #0f172a; margin-bottom: 4px;">User SOPs</strong>
+    <span style="font-size: 13px; color: #64748b;">Bike / Car / Parcel / CNG</span>
+  </a>
+  
+  <a href="https://docs.google.com/spreadsheets/d/1J8dOd8iXyBzQafpQS-2NDt5EvlLCE0Pc0lxRkcozspc/edit?pli=1&gid=1275837616#gid=1275837616" target="_blank" rel="noopener" style="display: flex; flex-direction: column; padding: 16px; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; text-decoration: none; color: #1e293b; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    <strong style="font-size: 16px; color: #0f172a; margin-bottom: 4px;">Driver SOPs</strong>
+    <span style="font-size: 13px; color: #64748b;">Rides Merged SOP</span>
+  </a>
 </div>
+
 <h3>ইন্টারনাল টুলস তালিকা</h3>
-<div class="tool-grid">
-<a class="tool-card" href="https://enlist.pathaointernal.com/login" target="_blank" rel="noopener"><span class="tool-name">Enlist</span></a>
-<a class="tool-card" href="https://er-beta.pathaointernal.com/user-search" target="_blank" rel="noopener"><span class="tool-name">Engine Room</span></a>
-<a class="tool-card" href="https://pathao.idesk360.com/auth" target="_blank" rel="noopener"><span class="tool-name">Idesk</span></a>
-<a class="tool-card" href="https://quest-v3.pathaointernal.com/?redirectFrom=%2Fquest-activation" target="_blank" rel="noopener"><span class="tool-name">Quest Dashboard</span></a>
-<a class="tool-card" href="https://talk.pathaolabs.com/one-pathao/channels/town-square" target="_blank" rel="noopener"><span class="tool-name">Pathao Talk</span></a>
-<a class="tool-card" href="https://garikoi.pathaointernal.com/" target="_blank" rel="noopener"><span class="tool-name">Gari koi</span></a>
-<a class="tool-card" href="http://192.168.1.90/datum/index.php" target="_blank" rel="noopener"><span class="tool-name">Datum</span></a>
-<a class="tool-card" href="https://tickets.pathaointernal.com/app/accounts/1/dashboard" target="_blank" rel="noopener"><span class="tool-name">Chatwoot</span></a>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px;">
+  <a href="https://enlist.pathaointernal.com/login" target="_blank" rel="noopener" style="display: block; padding: 14px 16px; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; text-decoration: none; color: #0f172a; font-weight: 600; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    Enlist
+  </a>
+  
+  <a href="https://er-beta.pathaointernal.com/user-search" target="_blank" rel="noopener" style="display: block; padding: 14px 16px; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; text-decoration: none; color: #0f172a; font-weight: 600; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    Engine Room
+  </a>
+  
+  <a href="https://quest-v3.pathaointernal.com/?redirectFrom=%2Fquest-activation" target="_blank" rel="noopener" style="display: block; padding: 14px 16px; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; text-decoration: none; color: #0f172a; font-weight: 600; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    Quest Dashboard
+  </a>
+  
+  <a href="https://pathao.idesk360.com/auth" target="_blank" rel="noopener" style="display: block; padding: 14px 16px; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; text-decoration: none; color: #0f172a; font-weight: 600; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    Idesk
+  </a>
+  
+  <a href="https://tickets.pathaointernal.com/app/accounts/1/dashboard" target="_blank" rel="noopener" style="display: block; padding: 14px 16px; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; text-decoration: none; color: #0f172a; font-weight: 600; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    Chatwoot
+  </a>
+  
+  <a href="https://talk.pathaolabs.com/one-pathao/channels/town-square" target="_blank" rel="noopener" style="display: block; padding: 14px 16px; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; text-decoration: none; color: #0f172a; font-weight: 600; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    Pathao Talk
+  </a>
+  
+  <a href="https://garikoi.pathaointernal.com/" target="_blank" rel="noopener" style="display: block; padding: 14px 16px; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; text-decoration: none; color: #0f172a; font-weight: 600; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    GariKoi
+  </a>
 </div>
 `;
 
 TOPICS[7].html.en = `
 <p class="lead">List of all essential SOP links and internal tools used in day-to-day work.</p>
+
 <h3>All SOPs</h3>
-<div class="link-grid">
-<a class="link-card" href="https://docs.google.com/spreadsheets/d/1iv2mUrA_DEbj03bPWOHwrzxionkqYsCp7aAkm7N5avs/edit?gid=925150589#gid=925150589" target="_blank" rel="noopener"><span>User SOPs</span><small>Bike / Car / Parcel / CNG</small></a>
-<a class="link-card" href="https://docs.google.com/spreadsheets/d/1J8dOd8iXyBzQafpQS-2NDt5EvlLCE0Pc0lxRkcozspc/edit?pli=1&gid=1275837616#gid=1275837616" target="_blank" rel="noopener"><span>Driver SOPs</span><small>Rides Merged SOP</small></a>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 25px;">
+  <a href="https://docs.google.com/spreadsheets/d/1iv2mUrA_DEbj03bPWOHwrzxionkqYsCp7aAkm7N5avs/edit?gid=925150589#gid=925150589" target="_blank" rel="noopener" style="display: flex; flex-direction: column; padding: 16px; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; text-decoration: none; color: #1e293b; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    <strong style="font-size: 16px; color: #0f172a; margin-bottom: 4px;">User SOPs</strong>
+    <span style="font-size: 13px; color: #64748b;">Bike / Car / Parcel / CNG</span>
+  </a>
+  
+  <a href="https://docs.google.com/spreadsheets/d/1J8dOd8iXyBzQafpQS-2NDt5EvlLCE0Pc0lxRkcozspc/edit?pli=1&gid=1275837616#gid=1275837616" target="_blank" rel="noopener" style="display: flex; flex-direction: column; padding: 16px; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; text-decoration: none; color: #1e293b; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    <strong style="font-size: 16px; color: #0f172a; margin-bottom: 4px;">Driver SOPs</strong>
+    <span style="font-size: 13px; color: #64748b;">Rides Merged SOP</span>
+  </a>
 </div>
+
 <h3>Internal Tools List</h3>
-<div class="tool-grid">
-<a class="tool-card" href="https://enlist.pathaointernal.com/login" target="_blank" rel="noopener"><span class="tool-name">Enlist</span></a>
-<a class="tool-card" href="https://er-beta.pathaointernal.com/user-search" target="_blank" rel="noopener"><span class="tool-name">Engine Room</span></a>
-<a class="tool-card" href="https://pathao.idesk360.com/auth" target="_blank" rel="noopener"><span class="tool-name">Idesk</span></a>
-<a class="tool-card" href="https://quest-v3.pathaointernal.com/?redirectFrom=%2Fquest-activation" target="_blank" rel="noopener"><span class="tool-name">Quest Dashboard</span></a>
-<a class="tool-card" href="https://talk.pathaolabs.com/one-pathao/channels/town-square" target="_blank" rel="noopener"><span class="tool-name">Pathao Talk</span></a>
-<a class="tool-card" href="https://garikoi.pathaointernal.com/" target="_blank" rel="noopener"><span class="tool-name">Gari koi</span></a>
-<a class="tool-card" href="http://192.168.1.90/datum/index.php" target="_blank" rel="noopener"><span class="tool-name">Datum</span></a>
-<a class="tool-card" href="https://tickets.pathaointernal.com/app/accounts/1/dashboard" target="_blank" rel="noopener"><span class="tool-name">Chatwoot</span></a>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px;">
+  <a href="https://enlist.pathaointernal.com/login" target="_blank" rel="noopener" style="display: block; padding: 14px 16px; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; text-decoration: none; color: #0f172a; font-weight: 600; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    Enlist
+  </a>
+  
+  <a href="https://er-beta.pathaointernal.com/user-search" target="_blank" rel="noopener" style="display: block; padding: 14px 16px; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; text-decoration: none; color: #0f172a; font-weight: 600; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    Engine Room
+  </a>
+  
+  <a href="https://quest-v3.pathaointernal.com/?redirectFrom=%2Fquest-activation" target="_blank" rel="noopener" style="display: block; padding: 14px 16px; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; text-decoration: none; color: #0f172a; font-weight: 600; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    Quest Dashboard
+  </a>
+  
+  <a href="https://pathao.idesk360.com/auth" target="_blank" rel="noopener" style="display: block; padding: 14px 16px; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; text-decoration: none; color: #0f172a; font-weight: 600; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    Idesk
+  </a>
+  
+  <a href="https://tickets.pathaointernal.com/app/accounts/1/dashboard" target="_blank" rel="noopener" style="display: block; padding: 14px 16px; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; text-decoration: none; color: #0f172a; font-weight: 600; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    Chatwoot
+  </a>
+  
+  <a href="https://talk.pathaolabs.com/one-pathao/channels/town-square" target="_blank" rel="noopener" style="display: block; padding: 14px 16px; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; text-decoration: none; color: #0f172a; font-weight: 600; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    Pathao Talk
+  </a>
+  
+  <a href="https://garikoi.pathaointernal.com/" target="_blank" rel="noopener" style="display: block; padding: 14px 16px; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; text-decoration: none; color: #0f172a; font-weight: 600; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    GariKoi
+  </a>
 </div>
 `;

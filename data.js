@@ -50,7 +50,7 @@ const TOPICS = [
   {
     id: "payment-flow",
     num: "07",
-    icon: "refresh-cw",
+    icon: "arrows-split-up-and-left",
     title: { bn: "পেমেন্ট ফ্লো", en: "Payment Flow" },
     subtitle: { bn: "ডিজিটাল, পে-লেটার ও ডিউ পেমেন্ট ফ্লো", en: "Digital, Pay Later & due payment flow" },
     html: { bn: "", en: "" }
@@ -58,7 +58,7 @@ const TOPICS = [
   {
     id: "sops-tools",
     num: "08",
-    icon: "tool",
+    icon: "toolbox",
     title: { bn: "SOP ও ইন্টারনাল টুলস", en: "SOPs & Internal Tools" },
     subtitle: { bn: "জরুরি SOP লিংক ও ইন্টারনাল টুলস", en: "Essential SOP links & internal tools" },
     html: { bn: "", en: "" }
@@ -66,7 +66,7 @@ const TOPICS = [
   {
     id: "parcel-service",
     num: "09",
-    icon: "package",
+    icon: "box",
     title: { bn: "পার্সেল সার্ভিস", en: "Parcel Service" },
     subtitle: { bn: "ডেলিভারি গাইডলাইন, রিটার্ন নীতি ও সার্ভিস সংক্রান্ত বিস্তারিত তথ্য", en: "Delivery guidelines, return policy & service details" },
     html: { bn: "", en: "" }
@@ -74,7 +74,7 @@ const TOPICS = [
   {
     id: "qa-parameter",
     num: "10",
-    icon: "check-square",
+    icon: "list-check",
     title: { bn: "QA Parameter", en: "QA Parameter" },
     subtitle: { bn: "কোয়ালিটি অ্যাসুরেন্স মানদণ্ড, কল ইভালুয়েশন ও স্কোরিং গাইড", en: "Quality assurance parameters, call evaluation & scoring guide" },
     html: { bn: "", en: "" }

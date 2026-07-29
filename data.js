@@ -1259,26 +1259,254 @@ TOPICS[8].html.en = `
 </ul>
 `;
 
-TOPICS[9].html.bn = `
-<p class="lead">কোয়ালিটি অ্যাসুরেন্স (QA) মানদণ্ড, এজেন্টদের জন্য কল ইভালুয়েশন প্রসেস এবং স্কোরিং গাইডলাইন।</p>
-<h3>১. কল ইভালুয়েশন প্যারামিটার</h3>
-<p>কাস্টমার সার্ভিস প্রতিনিধির পারফরম্যান্স মূল্যায়নের জন্য নিম্নলিখিত প্যারামিটারসমূহ ব্যবহৃত হয়:</p>
-<ul>
-<li><strong>প্রফেশনালিজম ও অভিবাদন (Greeting):</strong> যথাযথ পেশাদারিত্ব ও সৌজন্যমূলক সম্ভাষণ।</li>
-<li><strong>সঠিক তথ্য প্রদান (Accuracy):</strong> SOP অনুযায়ী নির্ভুল ও সঠিক তথ্য শেয়ার করা।</li>
-<li><strong>সক্রিয় শ্রবণ ও মনোযোগ (Active Listening):</strong> কাস্টমারের সমস্যা মন দিয়ে শোনা এবং ধৈর্যশীল আচরণ।</li>
-<li><strong>দ্রুত সমাধান (Problem Solving):</strong> সময়মত ও সঠিক প্রক্রিয়ায় টিকিটিং বা সমস্যা সমাধান সম্পন্ন করা।</li>
-</ul>
-`;
-
 TOPICS[9].html.en = `
-<p class="lead">Quality Assurance (QA) parameters, agent call evaluation process, and scoring guidelines.</p>
-<h3>1. Call Evaluation Parameters</h3>
-<p>The following parameters are evaluated during customer service agent interactions:</p>
-<ul>
-<li><strong>Professionalism & Greeting:</strong> Proper professional etiquette and polite greetings.</li>
-<li><strong>Information Accuracy:</strong> Providing precise information strictly adhering to SOPs.</li>
-<li><strong>Active Listening:</strong> Attentively listening to the customer's issues and maintaining patience.</li>
-<li><strong>Resolution & Efficiency:</strong> Swift problem solving and accurate ticket logging.</li>
-</ul>
+<p class="lead">QA Parameters & Call Evaluation Process for the Rides Team across all operational channels.</p>
+
+<style>
+  .qa-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    overflow: hidden;
+  }
+  .qa-card summary {
+    padding: 14px 18px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #f8f9fa;
+    color: #2c3e50;
+    user-select: none;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .qa-card summary::-webkit-details-marker {
+    display: none;
+  }
+  .qa-card summary::after {
+    content: "►";
+    font-size: 12px;
+    color: #7f8c8d;
+    transition: transform 0.2s ease;
+  }
+  .qa-card[open] summary::after {
+    transform: rotate(90deg);
+  }
+  .qa-card summary:hover {
+    background-color: #f1f3f5;
+  }
+  .qa-card-content {
+    padding: 16px;
+  }
+  .qa-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+  }
+  .qa-table th, .qa-table td {
+    border: 1px solid #e9ecef;
+    padding: 10px 12px;
+    text-align: left;
+    font-size: 14px;
+  }
+  .qa-table th {
+    background-color: #f1f3f5;
+    color: #333;
+    font-weight: 600;
+  }
+  .qa-table tr:nth-child(even) {
+    background-color: #fdfdfd;
+  }
+  .section-header-row {
+    background-color: #e9ecef !important;
+    font-weight: bold;
+    color: #1a252f;
+  }
+</style>
+
+<h3>1. QA Parameters by Channel</h3>
+<p>Click on any operational channel below to view its specific evaluation parameters and scoring breakdown:</p>
+
+<!-- 1. Inbound Card -->
+<details class="qa-card">
+  <summary><span>1. Inbound</span></summary>
+  <div class="qa-card-content">
+    <table class="qa-table">
+      <thead>
+        <tr>
+          <th>Parameter</th>
+          <th style="width: 120px;">Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="section-header-row">
+          <td colspan="2">Soft Skill & Call Etiquette</td>
+        </tr>
+        <tr><td>Welcome Greetings</td><td>5.0</td></tr>
+        <tr><td>Addressing and Responding Properly without Interruption and Overlapping</td><td>8.0</td></tr>
+        <tr><td>Using Appropriate Magic words, Showing Empathy and Courtesy, Willingness to Help with Friendly and Positive Expression and Enthusiasm, Professionalism.</td><td>10.0</td></tr>
+        <tr><td>Proper rate of speech and Pronunciation (Avoid Jargon)</td><td>3.0</td></tr>
+        <tr><td>Maintaining proper hold process</td><td>3.0</td></tr>
+        <tr><td>Asking For Further Assistance</td><td>2.0</td></tr>
+        <tr><td>Appropriate Closing Dialogues without showing rush or not so much delay</td><td>5.0</td></tr>
+        <tr><td>CSAT (transfer)</td><td>4.0</td></tr>
+        <tr class="section-header-row">
+          <td colspan="2">Service Knowledge & CE Parameter</td>
+        </tr>
+        <tr><td>Using Effective Probing</td><td>6.0</td></tr>
+        <tr><td>Issue Identification with problem solving skill</td><td>10.0</td></tr>
+        <tr><td>Appropriate Escalation and Resolution with Proper CRM Note (Follow-up if required)</td><td>6.0</td></tr>
+        <tr><td>Provide Correct Information /Service</td><td>10.0</td></tr>
+        <tr><td>Provide Complete Information/ Service</td><td>10.0</td></tr>
+        <tr><td>Proper Resource Using/Handling</td><td>8.0</td></tr>
+        <tr><td>Correct and Complete CRM Accuracy Capture (Proper RTC Capture and Wrap-up)</td><td>10.0</td></tr>
+      </tbody>
+    </table>
+  </div>
+</details>
+
+<!-- 2. Live Chat & Social Media Card -->
+<details class="qa-card">
+  <summary><span>2. Live Chat & Social Media</span></summary>
+  <div class="qa-card-content">
+    <table class="qa-table">
+      <thead>
+        <tr>
+          <th>Parameter</th>
+          <th style="width: 120px;">Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="section-header-row">
+          <td colspan="2">Soft Skill & Writing Mannerism (50%)</td>
+        </tr>
+        <tr><td>Opening and Closing Greetings</td><td>5</td></tr>
+        <tr><td>Acknowledging properly/Proper Responding</td><td>7</td></tr>
+        <tr><td>Use of similar Format/Language/Correct Spelling</td><td>4</td></tr>
+        <tr><td>Polite, Magic & Formal words/ Sincere Apology/ Empathy</td><td>5</td></tr>
+        <tr><td>Proper Reply timing/Hold Process</td><td>7</td></tr>
+        <tr><td>Grammatically Correct Sentences with proper sentence structure, Proper use of Punctuation and Special Characters</td><td>7</td></tr>
+        <tr><td>Late Closing</td><td>6</td></tr>
+        <tr><td>Willingness to help the customer/Ownership/Proactive Communication</td><td>6</td></tr>
+        <tr><td>Professionalism in the reply (Ex: Use of Jargon or informal Language Etc)</td><td>3</td></tr>
+        <tr class="section-header-row">
+          <td colspan="2">Service Knowledge & CE Parameter (50%)</td>
+        </tr>
+        <tr><td>Appropriate Escalation/ Proper Resolution/ Proper Follow up</td><td>8</td></tr>
+        <tr><td>Proper Resource Using/Handling</td><td>7</td></tr>
+        <tr><td>Effective Probing & Issue Identification</td><td>8</td></tr>
+        <tr><td>Provide Correct Information /Service</td><td>8</td></tr>
+        <tr><td>Provide Complete Information/ Service</td><td>8</td></tr>
+        <tr><td>Input Tag(RTC) Correctly & Completely</td><td>8</td></tr>
+        <tr><td>Offered Further Assistance</td><td>3</td></tr>
+      </tbody>
+    </table>
+  </div>
+</details>
+
+<!-- 3. Complain Management Card -->
+<details class="qa-card">
+  <summary><span>3. Complain Management</span></summary>
+  <div class="qa-card-content">
+    <table class="qa-table">
+      <thead>
+        <tr>
+          <th>Parameter</th>
+          <th style="width: 120px;">Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Welcome Greetings</td><td>3.0</td></tr>
+        <tr><td>Sharing Objective of the Call/Taking Permission to talk (if required)</td><td>3.0</td></tr>
+        <tr><td>Active Listening/ Focus On Call/ Interruption/Overlapping</td><td>8.0</td></tr>
+        <tr><td>Speaking Skill (Proper Rate of Speech, Proper Pronunciation)</td><td>3.0</td></tr>
+        <tr><td>Ownership/Express willingness to help and confidence</td><td>8.0</td></tr>
+        <tr><td>Apology/Sympathy/Empathy/Friendly tone</td><td>8.0</td></tr>
+        <tr><td>Demonstrated professional language and behavior</td><td>6.0</td></tr>
+        <tr><td>Uses appropriate closing (Without showing Rush)</td><td>5.0</td></tr>
+        <tr><td>Proper probing and solving Skill</td><td>8.0</td></tr>
+        <tr><td>Obtains the complaint details from related modules before initiating the call.</td><td>4.0</td></tr>
+        <tr><td>Appropriate resolution/escalation/Follow-up (with proper CRM description)</td><td>10.0</td></tr>
+        <tr><td>Uses Tools & Resources Effectively</td><td>8.0</td></tr>
+        <tr><td>Provide correct Service/ information</td><td>10.0</td></tr>
+        <tr><td>Incomplete Information/service/ Csat Transfer missed</td><td>10.0</td></tr>
+        <tr><td>Inform respective Complaint SLA</td><td>6.0</td></tr>
+      </tbody>
+    </table>
+  </div>
+</details>
+
+<!-- 4. Report Issue & Email Card -->
+<details class="qa-card">
+  <summary><span>4. Report Issue & Email</span></summary>
+  <div class="qa-card-content">
+    <table class="qa-table">
+      <thead>
+        <tr>
+          <th>Parameter</th>
+          <th style="width: 120px;">Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="section-header-row">
+          <td colspan="2">Soft Skill & Writing Mannerism (40%)</td>
+        </tr>
+        <tr><td>Welcome Greeting (Including Opening Phrase)</td><td>3</td></tr>
+        <tr><td>Alertness/Acknowledging properly</td><td>7</td></tr>
+        <tr><td>Use of similar Format/Language</td><td>5</td></tr>
+        <tr><td>Polite, Magic & Formal words/ Sincere Apology</td><td>5</td></tr>
+        <tr><td>Grammatically Correct Sentences with proper Punctuation and sentence structure</td><td>5</td></tr>
+        <tr><td>Correct Spelling</td><td>5</td></tr>
+        <tr><td>Willingness to help/educate the customer (Where Required)</td><td>7</td></tr>
+        <tr><td>Appropriate End Greeting</td><td>3</td></tr>
+        <tr class="section-header-row">
+          <td colspan="2">Service Knowledge & CE Parameter</td>
+        </tr>
+        <tr><td>Proper probing</td><td>10</td></tr>
+        <tr><td>Issue Identification and Solving Skill</td><td>10</td></tr>
+        <tr><td>Appropriate Escalation/ Proper Resolution/ Proper Follow up</td><td>10</td></tr>
+        <tr><td>Provide Correct/Complete Information/Service</td><td>10</td></tr>
+        <tr><td>Proper Resource Using/Handling</td><td>10</td></tr>
+        <tr><td>Input Tag Correctly and Completely</td><td>5</td></tr>
+        <tr><td>Proper CRM notes</td><td>5</td></tr>
+      </tbody>
+    </table>
+  </div>
+</details>
+
+<!-- 5. Campaign Management Outbound Card -->
+<details class="qa-card">
+  <summary><span>5. Campaign Management Outbound</span></summary>
+  <div class="qa-card-content">
+    <table class="qa-table">
+      <thead>
+        <tr>
+          <th>Parameter</th>
+          <th style="width: 120px;">Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Welcome Greeting (As per Script)</td><td>2.0</td></tr>
+        <tr><td>Explain Objective of the call & Taking Permission Where Required</td><td>13.0</td></tr>
+        <tr><td>Proper Rate of Speech/Pronunciation/Proper Accent</td><td>10.0</td></tr>
+        <tr><td>Professional Behavior/Friendly Tone/Enthusiasm/Magic Words/Helping Attitude/ Tone of Communication(Formal/Casual Tonality)</td><td>13.0</td></tr>
+        <tr><td>Active Listening/Uninterruption/Addressing & Responding Properly</td><td>10.0</td></tr>
+        <tr><td>Appropriate closing/End Greetings</td><td>1.0</td></tr>
+        <tr><td>Showing Rush/Huriness to finish the call</td><td>10.0</td></tr>
+        <tr class="section-header-row">
+          <td colspan="2">Service Knowledge (Critical Parameter)</td>
+        </tr>
+        <tr><td>Ask questions as per requirement/script</td><td>5.0</td></tr>
+        <tr><td>Asking tactfull probing questions to collect insightfull information</td><td>15.0</td></tr>
+        <tr><td>Provide Correct & Complete info (With Checking Proper Resources)</td><td>5.0</td></tr>
+        <tr><td>Input Data Correctly & Completely (Documentation and Record-keeping Accuracy)</td><td>15.0</td></tr>
+        <tr><td>Proper Disposition Selection</td><td>1.0</td></tr>
+      </tbody>
+    </table>
+  </div>
+</details>
 `;

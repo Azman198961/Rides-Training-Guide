@@ -332,25 +332,49 @@ body {
   }
 }
 
-/* TABLES & INNER COMPONENTS */
-.cx-table {
+/* =========================================================
+   TABLES & INNER COMPONENTS (UPDATED TO FIX WHITE BACKGROUND BUG)
+   ========================================================= */
+
+/* Added generic 'table' selector and '!important' to block unwanted white backgrounds */
+table, .cx-table {
   width: 100%;
   border-collapse: collapse;
   margin: 18px 0;
-  background: #111;
+  background-color: #111 !important; /* Force dark background */
+  color: var(--text-main) !important; /* Force white text */
   border-radius: 8px;
   overflow: hidden;
 }
 
+table th, table td, 
 .cx-table th, .cx-table td {
   padding: 12px 16px;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border-color) !important;
   text-align: left;
+  background-color: #111 !important; /* Overrides any white cell backgrounds */
+  color: var(--text-main) !important; /* Overrides any other text colors */
 }
 
+table th, 
 .cx-table th {
-  background-color: #222;
-  color: var(--pathao-red);
+  background-color: #222 !important;
+  color: var(--pathao-red) !important;
+}
+
+/* Ensure any injected white backgrounds in the container are reset to match the theme */
+.content-display-box [style*="background-color: white"],
+.content-display-box [style*="background: white"],
+.content-display-box [style*="background-color: #fff"],
+.content-display-box [style*="background-color: #ffffff"] {
+  background-color: var(--bg-card) !important;
+  color: var(--text-main) !important;
+}
+
+/* Optional: Fix for accordion/dropdown headers if they turn white */
+details, summary {
+  background-color: transparent !important;
+  color: var(--text-main) !important;
 }
 
 .callout {

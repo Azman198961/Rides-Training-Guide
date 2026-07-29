@@ -5,72 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pathao Rides CX Training Portal</title>
   
-  <!-- CSS Stylesheets -->
-  <link rel="stylesheet" href="styles (1).css">
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <style>
-    /* Detail View & UI Extra Adjustments */
-    .detail-container {
-      background: #ffffff;
-      border-radius: 16px;
-      padding: 30px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-      border: 1px solid #e2e8f0;
-      margin-top: 20px;
-    }
-
-    .detail-header-title {
-      font-size: 24px;
-      font-weight: 800;
-      color: var(--text-dark, #0f172a);
-      margin-bottom: 15px;
-      padding-bottom: 15px;
-      border-bottom: 2px solid #e2e8f0;
-    }
-
-    .content-body h3 {
-      font-size: 18px;
-      font-weight: 700;
-      color: #1e293b;
-      margin: 20px 0 10px 0;
-    }
-
-    .content-body p {
-      font-size: 15px;
-      line-height: 1.6;
-      color: #475569;
-      margin-bottom: 15px;
-    }
-
-    .content-body table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 20px 0;
-      background: #fff;
-      border-radius: 8px;
-      overflow: hidden;
-      border: 1px solid #cbd5e1;
-    }
-
-    .content-body th, .content-body td {
-      padding: 12px 16px;
-      text-align: left;
-      border: 1px solid #e2e8f0;
-    }
-
-    .content-body th {
-      background-color: #f1f5f9;
-      font-weight: 700;
-      color: #0f172a;
-    }
-  </style>
 </head>
 <body>
 
   <!-- Header / Navigation Bar -->
-  <div class="header">
+  <header class="header">
     <div class="logo-container" id="go-home">
       <span class="ride-icon-logo"><i class="fa-solid fa-motorcycle"></i></span>
       <span class="brand-name">pathao <small>CX</small></span>
@@ -79,38 +23,34 @@
       <button class="lang-btn active" id="lang-bn">বাংলা</button>
       <button class="lang-btn" id="lang-en">English</button>
     </div>
-  </div>
+  </header>
 
   <!-- Main Container -->
-  <div class="container">
+  <main class="container">
 
-    <!-- 1. TOPICS GRID VIEW (Main Page) -->
-    <div id="topics-view" class="view active-view">
+    <!-- TOPICS GRID VIEW -->
+    <section id="topics-view" class="view active-view">
       <div class="view-header">
         <h2 id="topics-title">একটি ট্রেনিং টপিক নির্বাচন করুন</h2>
       </div>
-      
-      <!-- Cards will be dynamically inserted here via script.js -->
       <div class="topics-grid" id="topics-grid"></div>
-    </div>
+    </section>
 
-    <!-- 2. DETAIL VIEW (Opens on Card Click - Replaces Pop-up) -->
-    <div id="detail-view" class="view" style="display: none;">
+    <!-- DETAIL VIEW -->
+    <section id="detail-view" class="view">
       <div class="view-header">
-        <button id="back-to-topics" class="back-btn">
-          <i class="fas fa-chevron-left"></i> সব টপিক
+        <button id="back-btn" class="back-btn">
+          <i class="fas fa-chevron-left"></i> <span id="back-btn-text">সব টপিক</span>
         </button>
       </div>
       
       <div class="detail-container">
-        <h1 id="detail-topic-title" class="detail-header-title"></h1>
-        <div id="content-display" class="content-body">
-          <!-- Information from data.js will be loaded here -->
-        </div>
+        <h1 id="detail-title" class="detail-header-title"></h1>
+        <div id="detail-content" class="content-body"></div>
       </div>
-    </div>
+    </section>
 
-  </div>
+  </main>
 
   <!-- External JavaScript Files -->
   <script src="data.js"></script>

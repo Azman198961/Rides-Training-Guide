@@ -1,59 +1,93 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pathao Rides CX Training Portal</title>
-  
-  <!-- CSS Stylesheet -->
-  <link rel="stylesheet" href="styles.css">
-  
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pathao Rides CX — ট্রেনিং ম্যাটেরিয়াল</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- Header / Navigation Bar -->
-  <header class="header">
-    <div class="logo-container" id="go-home">
-      <span class="ride-icon-logo"><i class="fa-solid fa-motorcycle"></i></span>
-      <span class="brand-name">pathao <small>CX</small></span>
-    </div>
-    <div class="lang-switch">
-      <button class="lang-btn active" id="lang-bn">বাংলা</button>
-      <button class="lang-btn" id="lang-en">English</button>
+  <!-- Top Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="brand" id="go-home">
+        <!-- Pathao SVG Logo Header -->
+        <div class="pathao-logo-wrapper">
+          <svg class="pathao-svg-logo" viewBox="0 0 240 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.5 5L3 24.5H15V45L34.5 25.5H22.5V5Z" fill="#E50914"/>
+            <text x="45" y="35" font-family="'Inter', sans-serif" font-weight="900" font-size="28" fill="#FFFFFF" letter-spacing="1">pathao</text>
+          </svg>
+        </div>
+        <span class="brand-tag">CX Training</span>
+      </div>
+
+      <div class="nav-controls">
+        <div class="lang-switch">
+          <button id="lang-bn" class="lang-btn active">বাংলা</button>
+          <button id="lang-en" class="lang-btn">English</button>
+        </div>
+      </div>
     </div>
   </header>
 
-  <!-- Main Container -->
-  <main class="container">
-
-    <!-- TOPICS GRID VIEW -->
-    <section id="topics-view" class="view active-view">
-      <div class="view-header">
-        <h2 id="topics-title">একটি ট্রেনিং টপিক নির্বাচন করুন</h2>
-      </div>
-      <div class="topics-grid" id="topics-grid"></div>
-    </section>
-
-    <!-- DETAIL VIEW -->
-    <section id="detail-view" class="view">
-      <div class="view-header">
-        <button id="back-btn" class="back-btn">
-          <i class="fas fa-chevron-left"></i> <span id="back-btn-text">সব টপিক</span>
+  <main class="main-content">
+    <!-- VIEW 1: WELCOMING HOME PAGE -->
+    <section id="welcome-view" class="view-section active-view">
+      <div class="welcome-card">
+        <div class="welcome-animation-box">
+          <div class="pulse-ring"></div>
+          <div class="pulse-ring delay-1"></div>
+          <div class="welcome-icon">
+            <i class="fas fa-motorcycle"></i>
+          </div>
+        </div>
+        
+        <h1 id="welcome-title" class="fade-in-up">Welcome To Pathao Ride CX Training Guide</h1>
+        <p id="welcome-subtitle" class="fade-in-up delay-text">কাস্টমার এক্সপেরিয়েন্স, রাইড ফ্লো এবং ইন্টারনাল টুলস সহজে শিখুন।</p>
+        
+        <button id="btn-choose-topic" class="btn-primary pulse-btn">
+          <span id="btn-text">টপিক নির্বাচন করুন</span>
+          <i class="fas fa-arrow-right"></i>
         </button>
       </div>
-      
-      <div class="detail-container">
-        <h1 id="detail-title" class="detail-header-title"></h1>
-        <div id="detail-content" class="content-body"></div>
+    </section>
+
+    <!-- VIEW 2: TOPICS GRID VIEW -->
+    <section id="topics-view" class="view-section">
+      <div class="container">
+        <div class="view-header">
+          <button id="back-to-home" class="btn-back">
+            <i class="fas fa-chevron-left"></i> হোম
+          </button>
+          <h2 id="topics-title" class="section-title">একটি ট্রেনিং টপিক নির্বাচন করুন</h2>
+        </div>
+        <div id="topics-grid" class="topics-grid"></div>
       </div>
     </section>
 
+    <!-- VIEW 3: DETAIL CONTENT VIEW WITH ANIMATION -->
+    <section id="detail-view" class="view-section">
+      <div class="container">
+        <div class="view-header detail-header">
+          <button id="back-to-topics" class="btn-back">
+            <i class="fas fa-chevron-left"></i> সব টপিক
+          </button>
+          <h2 id="detail-topic-title" class="detail-title">--</h2>
+        </div>
+        
+        <!-- Animated Content Container -->
+        <div id="content-display" class="content-display-box"></div>
+      </div>
+    </section>
   </main>
 
-  <!-- External JavaScript Files -->
   <script src="data.js"></script>
-  <script src="script.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

@@ -1,75 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pathao Rides CX Training Guide</title>
-  
-  <!-- Favicon Fix -->
-  <link rel="shortcut icon" href="#">
-  
-  <!-- CSS Link with Versioning to bypass Browser Cache -->
-  <link rel="stylesheet" href="styles.css?v=3.0">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <title>Pathao Rides CX — ট্রেনিং ম্যাটেরিয়াল</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  
-  <!-- Header / Navigation -->
+
+  <!-- Header -->
   <header class="header">
     <div class="logo-container" id="go-home">
       <i class="fas fa-motorcycle ride-icon-logo"></i>
-      <span class="brand-name">pathao <small>Rides CX</small></span>
+      <div class="brand-name">pathao <small>CX</small></div>
     </div>
     <div class="lang-switch">
-      <button id="lang-bn" class="lang-btn active">বাংলা</button>
-      <button id="lang-en" class="lang-btn">English</button>
+      <button class="lang-btn active" id="lang-bn">বাংলা</button>
+      <button class="lang-btn" id="lang-en">English</button>
     </div>
   </header>
 
-  <!-- Section 1: Hero / Welcome Page View -->
-  <section id="welcome-view" class="view active-view">
+  <!-- Welcome View -->
+  <main id="welcome-view" class="view active-view">
     <div class="hero-card">
       <div class="animation-track">
         <i class="fas fa-motorcycle animated-bike"></i>
       </div>
-      <h1 id="welcome-title">Welcome to Pathao Rides Training Guide</h1>
-      <p id="welcome-subtitle">Master customer experience, ride flows, and internal tools with ease.</p>
-      <button id="btn-choose-topic" class="primary-btn">
-        <span id="btn-text">Choose your Topic</span>
+      <h1 id="welcome-title">পাঠাও রাইডস ট্রেনিং গাইডে স্বাগতম</h1>
+      <p id="welcome-subtitle">কাস্টমার এক্সপেরিয়েন্স, রাইড ফ্লো এবং ইন্টারনাল টুলস সহজে শিখুন।</p>
+      <button class="primary-btn" id="btn-choose-topic">
+        <span id="btn-text">টপিক নির্বাচন করুন</span>
         <i class="fas fa-arrow-right"></i>
       </button>
     </div>
-  </section>
+  </main>
 
-  <!-- Section 2: Topic Selection Grid View -->
-  <section id="topics-view" class="view">
+  <!-- Topics Grid View -->
+  <main id="topics-view" class="view">
     <div class="container">
       <div class="view-header">
-        <button class="back-btn" id="back-to-home"><i class="fas fa-chevron-left"></i> Home</button>
-        <h2 id="topics-title">Select a Training Topic</h2>
+        <button class="back-btn" id="back-to-home"><i class="fas fa-chevron-left"></i> হোম</button>
+        <h2 id="topics-title">একটি ট্রেনিং টপিক নির্বাচন করুন</h2>
       </div>
-      <div class="topics-grid" id="topics-grid">
-        <!-- Topic tiles injected dynamically by JS -->
-      </div>
+      <div class="topics-grid" id="topics-grid"></div>
     </div>
-  </section>
+  </main>
 
-  <!-- Section 3: Topic Content Detail Page View -->
-  <section id="detail-view" class="view">
+  <!-- Detail Content View -->
+  <main id="detail-view" class="view">
     <div class="container">
       <div class="view-header">
-        <button class="back-btn" id="back-to-topics"><i class="fas fa-chevron-left"></i> All Topics</button>
-        <h2 id="detail-topic-title">Topic Title</h2>
+        <button class="back-btn" id="back-to-topics"><i class="fas fa-chevron-left"></i> সব টপিক</button>
+        <h2 id="detail-topic-title">টপিক শিরোনাম</h2>
       </div>
-
-      <!-- Tab Content Display Box -->
-      <div class="content-box card-animation" id="content-display">
-        <!-- Topic detail HTML injected dynamically -->
-      </div>
+      <div class="content-box" id="content-display"></div>
     </div>
-  </section>
+  </main>
 
-  <script src="data.js"></script>
+  <script src="topics.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

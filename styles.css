@@ -203,11 +203,16 @@ body {
 }
 
 /* Clean Structured Table Styling */
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  margin: 16px 0 24px;
+}
+
 .cx-table, .content-body table {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  margin: 16px 0 24px;
   background: #ffffff;
   border-radius: 10px;
   overflow: hidden;
@@ -257,6 +262,7 @@ body {
   border-bottom: 2px solid transparent;
   margin-bottom: -2px;
   transition: var(--transition);
+  white-space: nowrap;
 }
 
 .tin-btn.active {
@@ -394,6 +400,7 @@ body {
   justify-content: center;
   font-weight: 700;
   font-size: 13px;
+  flex-shrink: 0;
 }
 
 .flow-arrow {

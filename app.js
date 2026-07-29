@@ -38,7 +38,8 @@
     fare: "theme-fare",
     due: "theme-due",
     flag: "theme-flag",
-    tools: "theme-payment"
+    "payment-flow": "theme-payment",
+    "sops-tools": "theme-payment"
   };
 
   // DOM Elements

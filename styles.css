@@ -194,7 +194,6 @@ body {
   line-height: 1.7;
 }
 
-/* Headings Improvement */
 .content-box h1, .content-box h2 {
   font-size: 22px;
   font-weight: 800;
@@ -216,7 +215,6 @@ body {
   margin: 18px 0 10px 0;
 }
 
-/* Section Card Wrapping for Scannability */
 .content-box section, 
 .content-box .section-card {
   background: #ffffff;
@@ -227,7 +225,6 @@ body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.02);
 }
 
-/* Bullet Points & Step Lists */
 .content-box ul, .content-box ol {
   padding-left: 20px;
   margin-bottom: 16px;
@@ -277,7 +274,47 @@ body {
   border-bottom: none;
 }
 
-/* Callout Note Boxes */
+/* Inner Tabs Styling */
+.tabs-inner {
+  margin: 20px 0;
+}
+
+.tabs-inner-nav {
+  display: flex;
+  gap: 8px;
+  border-bottom: 2px solid #e2e8f0;
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+
+.tin-btn {
+  background: none;
+  border: none;
+  padding: 10px 18px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: var(--transition);
+}
+
+.tin-btn.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+.tin-pane {
+  display: none;
+}
+
+.tin-pane.active {
+  display: block;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+/* Callouts, Badges & UI Elements */
 .callout, .content-box .note {
   background: #ffffff;
   border-left: 4px solid var(--primary);
@@ -288,11 +325,148 @@ body {
   box-shadow: 0 2px 6px rgba(0,0,0,0.03);
 }
 
+.callout.warn {
+  border-left-color: #eab308;
+  background: #fefce8;
+}
+
+.badge {
+  display: inline-block;
+  background: #fef2f2;
+  color: var(--primary);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.lead {
+  font-size: 15px;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.hint, .warn {
+  font-size: 13px;
+  color: #dc2626;
+  font-weight: 600;
+}
+
+/* Tier Grid (Star Program) */
+.tier-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.tier {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.tier-target {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+/* Status Chips & Scripts */
+.status-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.status-chip {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.status-red { background: #ef4444; }
+.status-green { background: #10b981; }
+.status-yellow { background: #f59e0b; }
+.status-gray { background: #6b7280; }
+.status-black { background: #1f2937; }
+
+.script-box {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  padding: 16px;
+  border-radius: 8px;
+  margin: 16px 0;
+  font-size: 13.5px;
+}
+
+/* Payment Flows */
+.flow {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.flow-step {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #fff;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.flow-num {
+  background: var(--primary);
+  color: #fff;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.flow-arrow {
+  text-align: center;
+  color: var(--text-muted);
+  font-weight: bold;
+}
+
+/* FAQ Details */
+.faq details {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.faq summary {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.faq p {
+  margin-top: 10px;
+  font-size: 13.5px;
+}
+
 /* ==========================================
    THEME ACCENTS & SHADES
    ========================================== */
 
-/* 1. Joining */
+/* 1. Joining & Bonus */
 .theme-joining {
   background-color: #f0fdf4 !important;
   border: 1px solid #bbf7d0 !important;
@@ -327,7 +501,7 @@ body {
 }
 .theme-due h1, .theme-due h2, .theme-due h3 { color: #a16207 !important; }
 
-/* 6. Payment */
+/* 6. Payment & Tools */
 .theme-payment {
   background-color: #f0f9ff !important;
   border: 1px solid #bae6fd !important;

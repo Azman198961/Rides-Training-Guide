@@ -995,26 +995,76 @@ TOPICS[6].html.bn = `
 <tr><td>Pathao Pay</td><td>Cash, DP, Paylater, Pathao Pay</td></tr>
 </tbody></table></div>
 <h3>ডিজিটাল পেমেন্ট ফ্লো</h3>
-<div class="flow">
-<div class="flow-step"><span class="flow-num">১</span><div><h4>TOP UP</h4><p>যখন ইউজার বা ড্রাইভ অ্যাপ থেকে পেমেন্ট রিকোয়েস্ট করা হয়।</p></div></div>
-<div class="flow-arrow">&darr;</div>
-<div class="flow-step"><span class="flow-num">২</span><div><h4>PAYMENT</h4><p>যখন পাঠাও-এর সিস্টেমে পেমেন্ট সফল হয়।</p></div></div>
-<div class="flow-arrow">&darr;</div>
-<div class="flow-step"><span class="flow-num">৩</span><div><h4>DISBURSED</h4><p>যখন পেমেন্ট ড্রাইভারের ডিজিটাল ক্রেডিটে যুক্ত হয়।</p></div></div>
-</div>
+<table>
+  <thead>
+    <tr>
+      <th>ধাপ / স্ট্যাটাস</th>
+      <th>বিবরণ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>TOP UP</strong></td>
+      <td>যখন ইউজার বা ড্রাইভ অ্যাপ থেকে পেমেন্ট রিকোয়েস্ট করা হয়।</td>
+    </tr>
+    <tr>
+      <td><strong>PAYMENT</strong></td>
+      <td>যখন পাঠাও-এর সিস্টেমে পেমেন্ট সফল হয়।</td>
+    </tr>
+    <tr>
+      <td><strong>DISBURSED</strong></td>
+      <td>যখন পেমেন্ট ড্রাইভারের ডিজিটাল ক্রেডিটে যুক্ত হয়।</td>
+    </tr>
+  </tbody>
+</table>
+
 <h3>পে-লেটার পেমেন্ট ফ্লো</h3>
-<div class="flow">
-<div class="flow-step"><span class="flow-num">১</span><div><h4>DISBURSED</h4><p>পেমেন্ট সাথে সাথেই ড্রাইভারের ডিজিটাল ক্রেডিটে যুক্ত হয়ে যায়।</p></div></div>
-</div>
+<table>
+  <thead>
+    <tr>
+      <th>ধাপ / স্ট্যাটাস</th>
+      <th>বিবরণ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>DISBURSED</strong></td>
+      <td>পেমেন্ট সাথে সাথেই ড্রাইভারের ডিজিটাল ক্রেডিটে যুক্ত হয়ে যায়।</td>
+    </tr>
+  </tbody>
+</table>
+
 <h3>DP ডিউ এডজাস্টমেন্ট ফ্লো</h3>
-<div class="flow">
-<div class="flow-step"><span class="flow-num">১</span><div><h4>PAYMENT</h4><p>বকেয়ার জন্য পরিশোধ করা হয়েছে।</p></div></div>
-</div>
+<table>
+  <thead>
+    <tr>
+      <th>ধাপ / স্ট্যাটাস</th>
+      <th>বিবরণ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>PAYMENT</strong></td>
+      <td>বকেয়ার জন্য পরিশোধ করা হয়েছে।</td>
+    </tr>
+  </tbody>
+</table>
+
 <h3>DP উইথড্র ফ্লো</h3>
-<div class="flow">
-<div class="flow-step"><span class="flow-num">১</span><div><h4>PAYMENT</h4><p>ড্রাইভ অ্যাপ থেকে পেমেন্ট রিকোয়েস্ট করে বিকাশ, রকেট অথবা ওয়ানব্যাংক এটিএমে পাঠানো হয়।</p></div></div>
-</div>
-`;
+<table>
+  <thead>
+    <tr>
+      <th>ধাপ / স্ট্যাটাস</th>
+      <th>বিবরণ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>PAYMENT</strong></td>
+      <td>ড্রাইভ অ্যাপ থেকে পেমেন্ট রিকোয়েস্ট করে বিকাশ, রকেট অথবা ওয়ানব্যাংক এটিএমে পাঠানো হয়।</td>
+    </tr>
+  </tbody>
+</table>
 
 TOPICS[6].html.en = `
 <p class="lead">The complete payment flow for digital, Pay Later, and due payments.</p>
@@ -1028,26 +1078,76 @@ TOPICS[6].html.en = `
 <tr><td>Pathao Pay</td><td>Cash, DP, Paylater, Pathao Pay</td></tr>
 </tbody></table></div>
 <h3>Digital Payment Flow</h3>
-<div class="flow">
-<div class="flow-step"><span class="flow-num">1</span><div><h4>TOP UP</h4><p>When payment is requested from the user or the Drive app.</p></div></div>
-<div class="flow-arrow">&darr;</div>
-<div class="flow-step"><span class="flow-num">2</span><div><h4>PAYMENT</h4><p>When payment is successful in Pathao's system.</p></div></div>
-<div class="flow-arrow">&darr;</div>
-<div class="flow-step"><span class="flow-num">3</span><div><h4>DISBURSED</h4><p>When the payment is added to the driver's digital credit.</p></div></div>
-</div>
+<table>
+  <thead>
+    <tr>
+      <th>Step / Status</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>TOP UP</strong></td>
+      <td>When payment is requested from the user or the Drive app.</td>
+    </tr>
+    <tr>
+      <td><strong>PAYMENT</strong></td>
+      <td>When payment is successful in Pathao's system.</td>
+    </tr>
+    <tr>
+      <td><strong>DISBURSED</strong></td>
+      <td>When the payment is added to the driver's digital credit.</td>
+    </tr>
+  </tbody>
+</table>
+
 <h3>Pay Later Payment Flow</h3>
-<div class="flow">
-<div class="flow-step"><span class="flow-num">1</span><div><h4>DISBURSED</h4><p>Payment is immediately disbursed to the driver's digital credit.</p></div></div>
-</div>
+<table>
+  <thead>
+    <tr>
+      <th>Step / Status</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>DISBURSED</strong></td>
+      <td>Payment is immediately disbursed to the driver's digital credit.</td>
+    </tr>
+  </tbody>
+</table>
+
 <h3>DP Due Adjustment Flow</h3>
-<div class="flow">
-<div class="flow-step"><span class="flow-num">1</span><div><h4>PAYMENT</h4><p>Paid for due.</p></div></div>
-</div>
+<table>
+  <thead>
+    <tr>
+      <th>Step / Status</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>PAYMENT</strong></td>
+      <td>Paid for due.</td>
+    </tr>
+  </tbody>
+</table>
+
 <h3>DP Withdraw Flow</h3>
-<div class="flow">
-<div class="flow-step"><span class="flow-num">1</span><div><h4>PAYMENT</h4><p>Payment is requested from the Drive app and sent to bKash, Rocket, or a OneBank ATM.</p></div></div>
-</div>
-`;
+<table>
+  <thead>
+    <tr>
+      <th>Step / Status</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>PAYMENT</strong></td>
+      <td>Payment is requested from the Drive app and sent to bKash, Rocket, or a OneBank ATM.</td>
+    </tr>
+  </tbody>
+</table>
 
 TOPICS[7].html.bn = `
 <p class="lead">প্রতিদিনের কাজের জন্য প্রয়োজনীয় সকল SOP লিংক এবং ইন্টারনাল টুলসের তালিকা।</p>

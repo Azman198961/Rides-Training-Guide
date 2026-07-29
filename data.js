@@ -1146,24 +1146,116 @@ TOPICS[7].html.en = `
 `;
 
 TOPICS[8].html.bn = `
-<p class="lead">পার্সেল ডেলিভারির নীতি, রিটার্ন প্রক্রিয়া, প্যাকেজিং গাইডলাইন ও কাস্টমার সার্ভিস সম্পর্কিত বিস্তারিত তথ্য।</p>
-<h3>১. পার্সেল ডেলিভারি সময়সীমা ও নীতি</h3>
-<p>পার্সেল সার্ভিস ব্যবহারের ক্ষেত্রে পিকআপ থেকে ডেলিভারি পর্যন্ত নির্ধারিত গাইডলাইন ও নিয়মাবলি প্রযোজ্য।</p>
+<p class="lead">পার্সেল ডেলিভারির নীতি, ব্যাচ অর্ডার, এক্সটেন্ডেড (ক্যাশলেস) ডেলিভারি, পেমেন্ট অন ডেলিভারি (পিওডি) ও কাস্টমার সার্ভিস সম্পর্কিত বিস্তারিত তথ্য।</p>
+
+<h3>১. পার্সেল ডেলিভারি সময়সীমা, নীতি ও সাধারণ নিয়মাবলী</h3>
+<p>পার্সেল সার্ভিস ব্যবহারের ক্ষেত্রে পিকআপ থেকে ডেলিভারি পর্যন্ত নির্ধারিত হালনাগাদ গাইডলাইন ও নিয়মাবলি প্রযোজ্য।</p>
 <ul>
-<li><strong>পিকআপ সময়:</strong> অর্ডার কনফার্ম হওয়ার পর নির্ধারিত সময়ের মধ্যে রাইডার পিকআপ পয়েন্টে পৌঁছাবেন।</li>
-<li><strong>রিটার্ন নীতি:</strong> যদি গ্রাহক বা রিসিভার পার্সেল গ্রহণ করতে অস্বীকৃতি জানান বা সংযোগ না পাওয়া যায়, তবে পার্সেলটি মার্চেন্ট/সেন্ডারের কাছে ফেরত পাঠানো হবে।</li>
-<li><strong>নিষেধাজ্ঞা:</strong> অবৈধ বা বিপজ্জনক বস্তু (যেমন: বিস্ফোরক, অবৈধ মাদক, অস্ত্র) পার্সেল হিসেবে পাঠানো সম্পূর্ণ নিষিদ্ধ।</li>
+  <li><strong>পিকআপ সময়:</strong> অর্ডার কনফার্ম হওয়ার পর নির্ধারিত সময়ের মধ্যে রাইডার পিকআপ পয়েন্টে পৌঁছাবেন।</li>
+  <li><strong>নিষেধাজ্ঞা:</strong> অবৈধ বা বিপজ্জনক বস্তু (যেমন: বিস্ফোরক, অবৈধ মাদক, অস্ত্র) পার্সেল হিসেবে পাঠানো সম্পূর্ণ নিষিদ্ধ।</li>
+  <li><strong>জরুরি সহায়তা:</strong> অ্যাপ ক্র্যাশ বা যেকোনো সমস্যার ক্ষেত্রে 09678100800 নম্বরে অথবা পাঠাও পার্সেল হিরোস সাপোর্ট (ফেসবুক) পেজে যোগাযোগ করতে হবে।</li>
+</ul>
+
+<h3>২. ব্যাচ অর্ডার ডেলিভারি</h3>
+<p>একসাথে একাধিক পার্সেল দক্ষতার সাথে ডেলিভারি করার নিয়মাবলী ও প্রক্রিয়া:</p>
+<ul>
+  <li><strong>সংজ্ঞা ও বৈশিষ্ট্য:</strong> ব্যাচ ডেলিভারি বলতে একসাথে একাধিক (সর্বোচ্চ ৩টি) পার্সেল সংগ্রহ করে কাছাকাছি অবস্থানে ডেলিভারি করাকে বোঝায়। এটি সিস্টেম দ্বারা স্বয়ংক্রিয়ভাবে তৈরি হয় (রাইডাররা নিজে তৈরি করতে পারে না)।</li>
+  <li><strong>ডেলিভারি সিকোয়েন্স ও রুট:</strong> রাইডাররা অ্যাপে দেখানো নির্ধারিত সময়ের মধ্যে সিকোয়েন্স পরিবর্তন করতে পারবেন। অ্যাপের অপটিমাইজড রুটে কোনো ভুল মনে হলে সাপোর্টকে জানাতে হবে, রাইডার নিজে রুট পরিবর্তন করতে পারবেন না।</li>
+  <li><strong>আংশিক সম্পন্নকরণ:</strong> কোনো নির্দিষ্ট অর্ডারের রিসিভারের সাথে যোগাযোগ করা না গেলে বাকি অর্ডারগুলো নিয়ে ব্যাচ আংশিকভাবে সম্পন্ন করা যাবে।</li>
+  <li><strong>লাইভ ট্র্যাকিং:</strong> গ্রাহকরা পুরো ব্যাচ ডেলিভারির সময় রাইডারের লাইভ লোকেশন দেখতে ও ট্র্যাক করতে পারবেন।</li>
+  <li><strong>আয় ও প্রণোদনা:</strong> ব্যাচের প্রতিটি পার্সেলের জন্য পৃথক স্বতন্ত্র ডেলিভারি ফি এবং কোয়েস্ট সুবিধা প্রযোজ্য। নির্দিষ্ট সময়ের আগে ডেলিভারিতে অতিরিক্ত বোনাস নেই, তবে সময়মতো ডেলিভারি করা বাধ্যতামূলক।</li>
+  <li><strong>বাতিলকরণ নীতি:</strong> রাইডাররা অ্যাপের "Cancel This Order" বাটন দিয়ে নিজে সরাসরি বাতিল করতে পারবেন না; প্রতিটি বাতিলকরণ অবশ্যই সাপোর্টের মাধ্যমে সম্পন্ন হতে হবে। অপস ইঞ্জিনের মাধ্যমে এটি পুনরায় ব্যাচ কিউতে যেতে পারে অথবা সম্পূর্ণ বাতিল হতে পারে।</li>
+</ul>
+
+<h3>৩. এক্সটেন্ডেড (ক্যাশলেস) ডেলিভারি</h3>
+<p>দূরবর্তী রেস্টুরেন্ট বা অবস্থান থেকে ডেলিভারির বিশেষ নীতিমালার বিবরণ:</p>
+<ul>
+  <li><strong>সংজ্ঞা ও ক্যাশলেস নীতি:</strong> এক্সটেন্ডেড ডেলিভারি নিয়মিত রেডিয়াসের বাইরে (৬ কিমি বা তার বেশি) থাকা রেস্টুরেন্ট থেকে খাবার অর্ডারের সুযোগ দেয়। দূরত্ব ও দ্রুত প্রক্রিয়াকরণের সুবিধার্থে এতে কোনো সিওডি (ক্যাশ অন ডেলিভারি) নেই, শুধুমাত্র ডিজিটাল প্রি-পেমেন্ট প্রযোজ্য।</li>
+  <li><strong>খাবারের গুণমান:</strong> রাইডাররা দূরত্বের ক্ষেত্রে খাবারের গুণমান বজায় রাখতে ইনসুলেটেড ব্যাগ ব্যবহার করবেন। সংবেদনশীল খাবার (যেমন: আইসক্রিম বা ঠান্ডা পানীয়) এই সেবায় বাদ পড়তে পারে।</li>
+  <li><strong>ফি ও দূরত্ব:</strong> সিস্টেম-জেনারেটেড রুট অনুযায়ী দূরত্ব হিসাব করা হয় এবং অপারেশনাল খরচের কারণে ডেলিভারি ফি বেশি হতে পারে। ভারী ট্রাফিক বা আবহাওয়া ডেলিভারির সময়কে প্রভাবিত করতে পারে।</li>
+  <li><strong>বাতিলকরণ ও রিফান্ড:</strong> রেস্টুরেন্ট প্রস্তুতি শুরু করার আগে ফ্রিতে বাতিল করা যেতে পারে। প্রস্তুতি শুরুর পর বাতিল করলে তা সম্পূর্ণরূপে ফেরতযোগ্য নাও হতে পারে (আংশিক রিফান্ড প্রযোজ্য হতে পারে)। নির্ধারিত সময়ে রাইডার না পাওয়া গেলে সিস্টেম স্বয়ংক্রিয়ভাবে বাতিল হয়ে যাবে এবং ৭২ ঘণ্টার মধ্যে রিফান্ড প্রক্রিয়া করা হবে।</li>
+</ul>
+
+<h3>৪. পেমেন্ট অন ডেলিভারি (পিওডি)</h3>
+<p>প্রাপকের কাছ থেকে ডিজিটাল পেমেন্ট সংগ্রহের নির্দেশিকা:</p>
+<ul>
+  <li><strong>সংজ্ঞা ও সক্রিয়করণ:</strong> প্রেরক (মার্চেন্ট/বিক্রেতা) অর্ডার তৈরির সময় "কালেক্ট প্রোডাক্ট পেমেন্ট" টগল অন করে পিওডি সক্রিয় করবেন। পিওডি সক্রিয় করলে অর্ডারটি স্বয়ংক্রিয়ভাবে "রিসিভার পে"-তে পরিবর্তিত হয়।</li>
+  <li><strong>ডিজিটাল-ওনলি (নগদ নিষিদ্ধ):</strong> পিওডি সার্ভিস সম্পূর্ণরূপে ডিজিটাল। রাইডার/ড্রাইভারদের নগদ (ক্যাশ) টাকা সংগ্রহ করা কঠোরভাবে নিষিদ্ধ।</li>
+  <li><strong>পেমেন্ট ফ্লো & বিকল্প:</strong> অ্যাপ এবং নন-অ্যাপ (এসএমএস লিঙ্কের মাধ্যমে) উভয় প্রাপকই পাঠাও পে, বিকাশ, নগদ বা কার্ডের মাধ্যমে সম্পূর্ণ অর্থ পরিশোধ করতে পারবেন (আংশিক পেমেন্ট বা পে-লেটার সমর্থিত নয়)। পেমেন্ট সম্পন্ন না হলে ড্রাইভারের স্ক্রিনে "পেমেন্ট পেন্ডিং" মেসেজ দেখাবে।</li>
+  <li><strong>পেমেন্ট ব্যর্থতার এসওপি (বিকাশ ম্যানুয়াল পেমেন্ট):</strong> পেমেন্ট লিঙ্কে সমস্যা হলে প্রাপককে সরাসরি পাঠাও-এর বিকাশ মার্চেন্ট নম্বরে (<strong>01878187724</strong>) পেমেন্ট করতে হবে এবং রেফারেন্স হিসেবে 'ট্রিপ আইডি' ব্যবহার করতে হবে। পরবর্তীতে টিএক্সএন আইডি (Txn ID) দিয়ে ভেরিফাই করে ট্র্যাকিং শীটে রেকর্ড করা হবে।</li>
+</ul>
+
+<h3>৫. রিটার্ন ও হ্যান্ডওভার ব্যর্থতার নীতি</h3>
+<ul>
+  <li><strong>রিটার্ন প্রক্রিয়া:</strong> রিসিভার পার্সেল গ্রহণ করতে অস্বীকৃতি জানালে বা যোগাযোগ করা না গেলে প্রথমে প্রেরককে অবহিত করতে হবে। প্রেরক ফেরত চাইলে ডাবল ডেলিভারি ফি প্রদান সাপেক্ষে ফেরত পাঠানো হবে।</li>
+  <li><strong>WIC-তে জমা:</strong> প্রেরক ফেরত না নিলে বা হ্যান্ডওভার ব্যর্থ হলে পার্সেলটি নিকটস্থ WIC (ওয়্যারহাউস/ইনস্পেকশন সেন্টার)-এ জমা দিতে হবে। অফিস সময়ের পরে জমা দিলে রাইডার অতিরিক্ত ১০০ টাকা + ডেলিভারি ফি পাবেন।</li>
+</ul>
+
+<h3>৬. বাস্তব পরিস্থিতি ও সমাধান (Case Solving)</h3>
+<ul>
+  <li><strong>ব্যাচ অর্ডারে কাস্টমার ফোন না ধরলে:</strong> রাইডার একা অর্ডার বাদ দিতে পারবেন না; রিসিভারকে না পাওয়া গেলে ব্যাচ আংশিক সম্পন্ন করবেন এবং পার্সেল ডাবল ফি-তে রিটার্ন বা WIC-তে জমা দিবেন।</li>
+  <li><strong>ডেলিভারি ঠিকানা পরিবর্তন করলে:</strong> রাইডার ঠিকানায় পরিবর্তন করতে পারবেন না। একমাত্র অপস ইঞ্জিন রুম সাপোর্টের মাধ্যমে কেসটি রি-ডেসপ্যাচ বা বাতিল করতে পারে।</li>
+  <li><strong>পেমেন্ট লিংক কাজ না করলে:</strong> গ্রাহককে বিকাশ মার্চেন্ট নম্বরে (01878187724) ট্রিপ আইডি রেফারেন্স সহ পেমেন্ট করিয়ে টিএক্সএন আইডি দিয়ে কনফার্ম হতে হবে।</li>
+  <li><strong>ভুল পিওডি পরিমাণ সেট করলে:</strong> ড্রাইভার পথে থাকলে পরিমাণ পরিবর্তন করা সম্ভব নয়, প্রেরককে সেই পরিমাণ মেনেই অর্ডার প্রক্রিয়া করতে হবে।</li>
 </ul>
 `;
 
 TOPICS[8].html.en = `
-<p class="lead">Detailed information on parcel delivery guidelines, return policies, packaging standards, and service info.</p>
-<h3>1. Parcel Delivery Guidelines & Policy</h3>
-<p>Standard guidelines and rules apply from pickup to delivery when using the Parcel Service.</p>
+<p class="lead">Detailed information on parcel delivery policies, batch orders, extended (cashless) delivery, Payment on Delivery (POD), and customer service guidelines.</p>
+
+<h3>1. Parcel Delivery Timelines & General Policies</h3>
+<p>Standard guidelines and operational rules apply from pickup to delivery when using the Parcel Service.</p>
 <ul>
-<li><strong>Pickup Timeline:</strong> Once the order is confirmed, the rider will arrive at the pickup location within the designated timeframe.</li>
-<li><strong>Return Policy:</strong> If the receiver refuses to accept the parcel or is unreachable, the parcel will be returned to the merchant/sender.</li>
-<li><strong>Prohibited Items:</strong> Sending illegal or hazardous items (e.g., explosives, contraband, weapons) via parcel is strictly forbidden.</li>
+  <li><strong>Pickup Timeline:</strong> Once the order is confirmed, the rider will arrive at the pickup location within the designated timeframe.</li>
+  <li><strong>Prohibited Items:</strong> Sending illegal or hazardous items (e.g., explosives, contraband, weapons) via parcel is strictly forbidden.</li>
+  <li><strong>Emergency Support:</strong> In case of app crashes or operational issues, contact 09678100800 or reach out via the Pathao Parcel Heroes Support Facebook page.</li>
+</ul>
+
+<h3>2. Batch Order Delivery</h3>
+<p>Guidelines and processes for efficiently handling multiple parcel deliveries simultaneously:</p>
+<ul>
+  <li><strong>Definition & Features:</strong> Batch delivery involves collecting up to 3 parcels simultaneously for nearby locations. Batches are automatically generated by the system; riders cannot create or select batches manually.</li>
+  <li><strong>Delivery Sequence & Routes:</strong> Riders may adjust the delivery sequence in the app, provided each delivery is completed within the specified schedule. The app suggests an optimized route; if riders notice route errors, they must inform Support and cannot change the route independently.</li>
+  <li><strong>Partial Completion:</strong> If a specific receiver is unreachable, the rider can partially complete the batch with the remaining orders. Otherwise, the full batch must be completed.</li>
+  <li><strong>Live Tracking:</strong> Customers can view and track the rider's live location throughout the batch delivery process.</li>
+  <li><strong>Earnings & Incentives:</strong> Riders earn separate, individual delivery fees for each parcel in a 3-parcel batch. Batch orders qualify for Quest benefits. No extra incentive is provided for early delivery, but late deliveries may incur penalties.</li>
+  <li><strong>Cancellation Policy:</strong> Riders cannot self-cancel orders using the "Cancel This Order" button; all mid-batch cancellations must go through Support. Ops Engine Room may perform a "Cancel & Redispatch" (returning the order to the queue) or a "Total Cancellation".</li>
+</ul>
+
+<h3>3. Extended (Cashless) Delivery</h3>
+<p>Specific policies for fulfilling food orders from distant restaurants outside the standard delivery radius:</p>
+<ul>
+  <li><strong>Definition & Cashless Policy:</strong> Extended delivery covers distances of 6 km or more using specialized Parcel Fleet riders. To mitigate distance risks and ensure speed, orders require digital pre-payment; COD is strictly not supported.</li>
+  <li><strong>Food Quality & Item Eligibility:</strong> Riders use insulated bags to preserve food quality. Sensitive items like ice cream or cold beverages may be excluded. Only restaurants with low prep time and high acceptance performance are eligible.</li>
+  <li><strong>Fees & Distance:</strong> Delivery fees are estimated based on system-generated routes and finalized at checkout. Higher fees account for increased travel distance and operational costs. Traffic and weather conditions may affect timing.</li>
+  <li><strong>Cancellation & Refunds:</strong> Orders are fully refundable if canceled before restaurant preparation or rider assignment. Once preparation begins, refunds depend on the order stage (partial refunds may apply). If no rider is found within the dispatch window, the system automatically cancels the order and processes a refund within 72 hours. If a rider cancels within 5 minutes of acceptance, the order is redispatched.</li>
+  <li><strong>Pickup & Communication:</strong> Pricing details may or may not be visible to riders prior to pickup based on system availability. In-app chat is unavailable for extended delivery; riders must communicate with customers via direct call.</li>
+</ul>
+
+<h3>4. Payment on Delivery (POD)</h3>
+<p>Guidelines for collecting product payments digitally from receivers upon delivery:</p>
+<ul>
+  <li><strong>Definition & Activation:</strong> Senders activate POD by enabling the "Collect Product Payment" toggle on the Parcel Details screen. Activating POD automatically sets the order to "Receiver Pay". In V1.0, POD is strictly digital-only; drivers cannot collect cash.</li>
+  <li><strong>Payout Methods:</strong> Senders can receive funds via bKash (Personal) or Pathao Pay (Personal/Merchant). Min/max collection limits apply per city.</li>
+  <li><strong>Receiver Payment Flow:</strong> App users can pay directly from the tracking screen via push notifications. Non-app users receive an SMS payment link as soon as the parcel is marked "picked". Payment links do not expire until completed or canceled by Ops. Partial payments and "Pay Later" options are not supported. Accepted digital payment methods include Pathao Pay, bKash, Nagad, and Cards.</li>
+  <li><strong>Driver Experience & Cash Prohibition:</strong> Drivers only see the delivery fare on their screens. If payment is pending upon arrival, a "Payment Pending" sheet prevents order completion. Cash collection is strictly prohibited and considered a severe driver violation. Receiver payments process independently of driver connectivity or battery issues.</li>
+  <li><strong>Payment Failure SOP (bKash Manual Payment):</strong> If the payment link fails ("Something Went Wrong"), guide the receiver to make a direct payment to Pathao's bKash Merchant Number (<strong>01878187724</strong>) using the Trip ID as the reference. CMT/Support verifies the Transaction ID (Txn ID), logs the case in Datum, and updates the Operations Tracking Sheet.</li>
+</ul>
+
+<h3>5. Handover Failures & Return Policy</h3>
+<ul>
+  <li><strong>Return Policy:</strong> If a receiver refuses or is unreachable, the sender is contacted first. If the sender requests a return, the parcel is sent back for a double delivery fee.</li>
+  <li><strong>WIC Deposit:</strong> If the sender does not request a return or handover fails, the parcel must be deposited at the nearest WIC (Warehouse/Inspection Center). For deposits made after office hours, riders receive an additional 100 BDT plus the delivery fee.</li>
+</ul>
+
+<h3>6. Scenario-Based Case Solving</h3>
+<ul>
+  <li><strong>Unreachable Receiver in Batch:</strong> The rider cannot remove the order independently. The batch is partially completed, and the unreachable parcel is returned for a double fee or deposited at a WIC based on sender instructions.</li>
+  <li><strong>Address Change Request in Batch:</strong> Delivery address changes are not allowed. Riders must inform the customer and escalate to Support/Ops for redispatch or total cancellation.</li>
+  <li><strong>Damaged Extended Delivery Item:</strong> Instruct the customer to submit photos via in-app support for compensation/refund evaluation based on the order stage.</li>
+  <li><strong>Cancellation After Preparation Starts:</strong> Inform the customer that full refunds are not guaranteed after preparation begins. Support will verify the stage to determine if a partial refund applies.</li>
+  <li><strong>POD Payment Link Failure:</strong> Instruct the receiver to pay via bKash Merchant (01878187724) using the Trip ID as the reference, verify the Txn ID, and record the entry in Datum.</li>
+  <li><strong>Incorrect POD Amount Set by Sender:</strong> If the driver is already en route, the amount cannot be modified. The sender must absorb the incorrect amount and carefully verify details for future orders.</li>
 </ul>
 `;
 

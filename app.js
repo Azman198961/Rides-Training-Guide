@@ -23,8 +23,11 @@
   const STORAGE_LANG = "pathao_cx_lang_v3";
   const STORAGE_TOPIC = "pathao_cx_topic_v3";
 
+  // Safeguard in case TOPICS is not loaded properly
+  const safeTopics = (typeof TOPICS !== "undefined" && Array.isArray(TOPICS)) ? TOPICS : [];
+
   let lang = localStorage.getItem(STORAGE_LANG) || "bn";
-  let activeTopic = localStorage.getItem(STORAGE_TOPIC) || (TOPICS[0] ? TOPICS[0].id : "");
+  let activeTopic = localStorage.getItem(STORAGE_TOPIC) || (safeTopics[0] ? safeTopics[0].id : "");
 
   // DOM Elements
   const btnBn = document.getElementById("lang-bn");
@@ -78,7 +81,12 @@
     if (!topicsGrid) return;
     topicsGrid.innerHTML = "";
 
-    TOPICS.forEach((t) => {
+    if (!safeTopics.length) {
+      topicsGrid.innerHTML = "<p>No topics available.</p>";
+      return;
+    }
+
+    safeTopics.forEach((t) => {
       const card = document.createElement("div");
       card.className = "topic-card";
       card.innerHTML = `
@@ -87,8 +95,8 @@
         </div>
         <div class="topic-card-content">
           <span class="topic-num">TOPIC ${t.num}</span>
-          <h3>${t.title[lang]}</h3>
-          <p>${t.subtitle[lang]}</p>
+          <h3>${t.title ? t.title[lang] : ''}</h3>
+          <p>${t.subtitle ? t.subtitle[lang] : ''}</p>
         </div>
       `;
 
@@ -126,17 +134,16 @@
 
   // Render Topic Content with Animation
   function renderDetailContent() {
-    if (!TOPICS.length) return;
-    const topic = TOPICS.find((t) => t.id === activeTopic) || TOPICS[0];
+    if (!safeTopics.length) return;
+    const topic = safeTopics.find((t) => t.id === activeTopic) || safeTopics[0];
 
-    if (detailTopicTitle) detailTopicTitle.textContent = topic.title[lang];
+    if (detailTopicTitle) detailTopicTitle.textContent = topic.title ? topic.title[lang] : '';
     if (contentDisplay) {
-      // Refresh CSS animation on topic switch
       contentDisplay.style.animation = 'none';
       contentDisplay.offsetHeight; // Trigger reflow
       contentDisplay.style.animation = null;
 
-      contentDisplay.innerHTML = topic.html[lang] || "<p>Content coming soon...</p>";
+      contentDisplay.innerHTML = (topic.html && topic.html[lang]) ? topic.html[lang] : "<p>Content coming soon...</p>";
       bindInnerTabs(contentDisplay);
     }
   }

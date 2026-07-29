@@ -9,7 +9,7 @@
   --card-bg: #ffffff;
   --text-dark: #0f172a;
   --text-muted: #475569;
-  --border-color: #cbd5e1;
+  --text-light: #cbd5e1; /* <-- Change 'color:' to '--text-light:' or similar */
   --radius: 16px;
   --transition: all 0.25s ease-in-out;
 }

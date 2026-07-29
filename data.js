@@ -1477,36 +1477,4 @@ TOPICS[9].html.en = `
     </table>
   </div>
 </details>
-
-<!-- 5. Campaign Management Outbound Card -->
-<details class="qa-card">
-  <summary><span>5. Campaign Management Outbound</span></summary>
-  <div class="qa-card-content">
-    <table class="qa-table">
-      <thead>
-        <tr>
-          <th>Parameter</th>
-          <th style="width: 120px;">Score</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>Welcome Greeting (As per Script)</td><td>2.0</td></tr>
-        <tr><td>Explain Objective of the call & Taking Permission Where Required</td><td>13.0</td></tr>
-        <tr><td>Proper Rate of Speech/Pronunciation/Proper Accent</td><td>10.0</td></tr>
-        <tr><td>Professional Behavior/Friendly Tone/Enthusiasm/Magic Words/Helping Attitude/ Tone of Communication(Formal/Casual Tonality)</td><td>13.0</td></tr>
-        <tr><td>Active Listening/Uninterruption/Addressing & Responding Properly</td><td>10.0</td></tr>
-        <tr><td>Appropriate closing/End Greetings</td><td>1.0</td></tr>
-        <tr><td>Showing Rush/Huriness to finish the call</td><td>10.0</td></tr>
-        <tr class="section-header-row">
-          <td colspan="2">Service Knowledge (Critical Parameter)</td>
-        </tr>
-        <tr><td>Ask questions as per requirement/script</td><td>5.0</td></tr>
-        <tr><td>Asking tactfull probing questions to collect insightfull information</td><td>15.0</td></tr>
-        <tr><td>Provide Correct & Complete info (With Checking Proper Resources)</td><td>5.0</td></tr>
-        <tr><td>Input Data Correctly & Completely (Documentation and Record-keeping Accuracy)</td><td>15.0</td></tr>
-        <tr><td>Proper Disposition Selection</td><td>1.0</td></tr>
-      </tbody>
-    </table>
-  </div>
-</details>
 `;

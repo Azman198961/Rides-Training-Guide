@@ -241,7 +241,7 @@ TOPICS[1].html.bn = `
 <thead><tr><th>সময়কাল</th><th>শর্ত</th><th>বোনাস</th></tr></thead>
 <tbody>
 <tr><td>প্রথম ৩ দিন</td><td>৩টি ট্রিপ</td><td>২০০ টাকা</td></tr>
-<tr><td>প্রথম ৭ দিন</td><td>১০টি ট্রিপ</td><td>৫০০ টাকা</td></tr>
+<tr><td>প্রথম ৭ দিন</td><td>১০টি ট্রিপ</td><td>৫০ও টাকা</td></tr>
 <tr><td>পরবর্তী ২০ দিন</td><td>২৫টি ট্রিপ</td><td>১,০০০ টাকা</td></tr>
 </tbody></table></div>
 <h3>জয়েনিং বোনাস: বাইক</h3>
@@ -260,7 +260,7 @@ TOPICS[1].html.bn = `
 <div class="table-wrap"><table class="cx-table">
 <thead><tr><th>সময়কাল</th><th>শর্ত</th><th>বোনাস</th></tr></thead>
 <tbody>
-<tr><td>প্রথম ৩ দিন</td><td>৩টি ট্রিপ</td><td>৫০ও টাকা</td></tr>
+<tr><td>প্রথম ৩ দিন</td><td>৩টি ট্রিপ</td><td>৫০০ টাকা</td></tr>
 <tr><td>প্রথম ২০ দিন</td><td>৩০টি ট্রিপ</td><td>২,০০০ টাকা</td></tr>
 <tr><td>পরবর্তী ২০ দিন</td><td>৪৫টি ট্রিপ</td><td>২,২০০ টাকা</td></tr>
 <tr><td>প্রথম ৪০ দিন</td><td>—</td><td>১০% কমিশনে ট্রিপ শেয়ার করার সুযোগ</td></tr>
@@ -280,7 +280,7 @@ TOPICS[1].html.bn = `
 <tbody>
 <tr><td>ঢাকা — Car Plus</td><td>১৫ দিনে ১০টি ট্রিপ</td><td>৩০০ টাকা</td><td>২৫০ টাকা</td></tr>
 <tr><td>ঢাকা — Car Prime</td><td>১৫ দিনে ১০টি ট্রিপ</td><td>৩০০ টাকা</td><td>৪০০ টাকা</td></tr>
-<tr><td>ঢাকা — Car Max</td><td>১৫ দিনে ১০টি ট্রিপ</td><td>৩০০ টাকা</td><td>৫০ও টাকা</td></tr>
+<tr><td>ঢাকা — Car Max</td><td>১৫ দিনে ১০টি ট্রিপ</td><td>৩০০ টাকা</td><td>৫০০ টাকা</td></tr>
 <tr><td>চট্টগ্রাম — Car Plus</td><td>১৫ দিনে ১০টি ট্রিপ</td><td>১,০০০ টাকা</td><td>১,০০০ টাকা</td></tr>
 </tbody></table></div>
 `;
@@ -995,7 +995,7 @@ TOPICS[6].html.bn = `
 <tr><td>Pathao Pay</td><td>Cash, DP, Paylater, Pathao Pay</td></tr>
 </tbody></table></div>
 <h3>ডিজিটাল পেমেন্ট ফ্লো</h3>
-<table>
+<div class="table-wrap"><table class="cx-table">
   <thead>
     <tr>
       <th>ধাপ / স্ট্যাটাস</th>
@@ -1016,10 +1016,10 @@ TOPICS[6].html.bn = `
       <td>যখন পেমেন্ট ড্রাইভারের ডিজিটাল ক্রেডিটে যুক্ত হয়।</td>
     </tr>
   </tbody>
-</table>
+</table></div>
 
 <h3>পে-লেটার পেমেন্ট ফ্লো</h3>
-<table>
+<div class="table-wrap"><table class="cx-table">
   <thead>
     <tr>
       <th>ধাপ / স্ট্যাটাস</th>
@@ -1032,10 +1032,10 @@ TOPICS[6].html.bn = `
       <td>পেমেন্ট সাথে সাথেই ড্রাইভারের ডিজিটাল ক্রেডিটে যুক্ত হয়ে যায়।</td>
     </tr>
   </tbody>
-</table>
+</table></div>
 
 <h3>DP ডিউ এডজাস্টমেন্ট ফ্লো</h3>
-<table>
+<div class="table-wrap"><table class="cx-table">
   <thead>
     <tr>
       <th>ধাপ / স্ট্যাটাস</th>
@@ -1048,10 +1048,10 @@ TOPICS[6].html.bn = `
       <td>বকেয়ার জন্য পরিশোধ করা হয়েছে।</td>
     </tr>
   </tbody>
-</table>
+</table></div>
 
 <h3>DP উইথড্র ফ্লো</h3>
-<table>
+<div class="table-wrap"><table class="cx-table">
   <thead>
     <tr>
       <th>ধাপ / স্ট্যাটাস</th>
@@ -1064,7 +1064,8 @@ TOPICS[6].html.bn = `
       <td>ড্রাইভ অ্যাপ থেকে পেমেন্ট রিকোয়েস্ট করে বিকাশ, রকেট অথবা ওয়ানব্যাংক এটিএমে পাঠানো হয়।</td>
     </tr>
   </tbody>
-</table>
+</table></div>
+`;
 
 TOPICS[6].html.en = `
 <p class="lead">The complete payment flow for digital, Pay Later, and due payments.</p>
@@ -1078,7 +1079,7 @@ TOPICS[6].html.en = `
 <tr><td>Pathao Pay</td><td>Cash, DP, Paylater, Pathao Pay</td></tr>
 </tbody></table></div>
 <h3>Digital Payment Flow</h3>
-<table>
+<div class="table-wrap"><table class="cx-table">
   <thead>
     <tr>
       <th>Step / Status</th>
@@ -1099,10 +1100,10 @@ TOPICS[6].html.en = `
       <td>When the payment is added to the driver's digital credit.</td>
     </tr>
   </tbody>
-</table>
+</table></div>
 
 <h3>Pay Later Payment Flow</h3>
-<table>
+<div class="table-wrap"><table class="cx-table">
   <thead>
     <tr>
       <th>Step / Status</th>
@@ -1115,10 +1116,10 @@ TOPICS[6].html.en = `
       <td>Payment is immediately disbursed to the driver's digital credit.</td>
     </tr>
   </tbody>
-</table>
+</table></div>
 
 <h3>DP Due Adjustment Flow</h3>
-<table>
+<div class="table-wrap"><table class="cx-table">
   <thead>
     <tr>
       <th>Step / Status</th>
@@ -1131,10 +1132,10 @@ TOPICS[6].html.en = `
       <td>Paid for due.</td>
     </tr>
   </tbody>
-</table>
+</table></div>
 
 <h3>DP Withdraw Flow</h3>
-<table>
+<div class="table-wrap"><table class="cx-table">
   <thead>
     <tr>
       <th>Step / Status</th>
@@ -1147,7 +1148,8 @@ TOPICS[6].html.en = `
       <td>Payment is requested from the Drive app and sent to bKash, Rocket, or a OneBank ATM.</td>
     </tr>
   </tbody>
-</table>
+</table></div>
+`;
 
 TOPICS[7].html.bn = `
 <p class="lead">প্রতিদিনের কাজের জন্য প্রয়োজনীয় সকল SOP লিংক এবং ইন্টারনাল টুলসের তালিকা।</p>
@@ -1357,6 +1359,156 @@ TOPICS[8].html.en = `
   <li><strong>POD Payment Link Failure:</strong> Instruct the receiver to pay via bKash Merchant (01878187724) using the Trip ID as the reference, verify the Txn ID, and record the entry in Datum.</li>
   <li><strong>Incorrect POD Amount Set by Sender:</strong> If the driver is already en route, the amount cannot be modified. The sender must absorb the incorrect amount and carefully verify details for future orders.</li>
 </ul>
+`;
+
+TOPICS[9].html.bn = `
+<p class="lead">সব গ্রাহকসেবা চ্যানেলে রাইডস টিমের জন্য QA প্যারামিটার ও কল ইভালুয়েশন প্রক্রিয়া।</p>
+
+<h3>১. চ্যানেল ভিত্তিক QA প্যারামিটার</h3>
+<p>নির্দিষ্ট ইভালুয়েশন প্যারামিটার এবং স্কোরিং দেখতে যেকোনো চ্যানেলে ক্লিক করুন:</p>
+
+<details class="qa-card">
+  <summary><span>১. ইনবাউন্ড (Inbound)</span></summary>
+  <div class="qa-card-content">
+    <div class="table-wrap"><table class="cx-table qa-table">
+      <thead>
+        <tr>
+          <th>প্যারামিটার</th>
+          <th style="width: 120px;">স্কোর</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="section-header-row">
+          <td colspan="2">সফ্ট স্কিল ও কল এটিকেট (Soft Skill & Call Etiquette)</td>
+        </tr>
+        <tr><td>ওয়েলকাম গ্রিটিংস (Welcome Greetings)</td><td>৫.০</td></tr>
+        <tr><td>কথা না থামিয়ে সঠিকভাবে সম্বোধন ও সাড়া দেওয়া (Addressing and Responding Properly without Interruption and Overlapping)</td><td>৮.০</td></tr>
+        <tr><td>উপযুক্ত ম্যাজিক ওয়ার্ডস ব্যবহার, সহানুভূতি ও সৌজন্য প্রকাশ, বন্ধুত্বপূর্ণ মনোভাবের সাথে সাহায্য করার ইচ্ছা (Using Appropriate Magic words, Showing Empathy and Courtesy, Willingness to Help)</td><td>১০.০</td></tr>
+        <tr><td>সঠিক উচ্চারণে স্পষ্ট কথা বলা (Proper rate of speech and Pronunciation)</td><td>৩.০</td></tr>
+        <tr><td>সঠিক হোল্ড প্রসেস বজায় রাখা (Maintaining proper hold process)</td><td>৩.০</td></tr>
+        <tr><td>অতিরিক্ত সহায়তার জন্য জিজ্ঞাসা করা (Asking For Further Assistance)</td><td>২.০</td></tr>
+        <tr><td>উপযুক্ত সমাপনী বক্তব্য (Appropriate Closing Dialogues)</td><td>৫.০</td></tr>
+        <tr><td>CSAT ট্রান্সফার (CSAT transfer)</td><td>৪.০</td></tr>
+        <tr class="section-header-row">
+          <td colspan="2">সার্ভিস নলেজ ও CE প্যারামিটার (Service Knowledge & CE Parameter)</td>
+        </tr>
+        <tr><td>কার্যকর অনুসন্ধান করা (Using Effective Probing)</td><td>৬.০</td></tr>
+        <tr><td>সমস্যা চিহ্নিতকরণ ও সমাধান দক্ষতা (Issue Identification with problem solving skill)</td><td>১০.০</td></tr>
+        <tr><td>সঠিক এস্কেলেশন ও সিআরএম নোট তৈরি (Appropriate Escalation and Resolution with Proper CRM Note)</td><td>৬.০</td></tr>
+        <tr><td>সঠিক তথ্য বা সেবা প্রদান (Provide Correct Information /Service)</td><td>১০.০</td></tr>
+        <tr><td>সম্পূর্ণ তথ্য বা সেবা প্রদান (Provide Complete Information/ Service)</td><td>১০.০</td></tr>
+        <tr><td>সঠিক রিসোর্স ব্যবহার/হ্যান্ডলিং (Proper Resource Using/Handling)</td><td>৮.০</td></tr>
+        <tr><td>সঠিক ও সম্পূর্ণ CRM ডেটা সংগ্রহ (Correct and Complete CRM Accuracy Capture)</td><td>১০.০</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</details>
+
+<details class="qa-card">
+  <summary><span>২. লাইভ চ্যাট ও সোশ্যাল মিডিয়া (Live Chat & Social Media)</span></summary>
+  <div class="qa-card-content">
+    <div class="table-wrap"><table class="cx-table qa-table">
+      <thead>
+        <tr>
+          <th>প্যারামিটার</th>
+          <th style="width: 120px;">স্কোর</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="section-header-row">
+          <td colspan="2">সফ্ট স্কিল ও লেখার ধরণ (৫০%) (Soft Skill & Writing Mannerism)</td>
+        </tr>
+        <tr><td>শুরু ও শেষের শুভেচ্ছা (Opening and Closing Greetings)</td><td>৫</td></tr>
+        <tr><td>সঠিকভাবে স্বীকার ও সাড়া দেওয়া (Acknowledging properly/Proper Responding)</td><td>৭</td></tr>
+        <tr><td>একই ফরম্যাট/ভাষা/বানান ব্যবহার (Use of similar Format/Language/Correct Spelling)</td><td>৪</td></tr>
+        <tr><td>নম্রতা, ম্যাজিক ওয়ার্ডস ও আন্তরিক দুঃখ প্রকাশ (Polite, Magic & Formal words/ Sincere Apology/ Empathy)</td><td>৫</td></tr>
+        <tr><td>সঠিক রেসপন্স টাইম ও হোল্ড প্রসেস (Proper Reply timing/Hold Process)</td><td>৭</td></tr>
+        <tr><td>ব্যাকরণগতভাবে সঠিক বাক্য ও বিরামচিহ্নের ব্যবহার (Grammatically Correct Sentences)</td><td>৭</td></tr>
+        <tr><td>অপ্রয়োজনীয়দের ক্ষেত্রে সময়মতো ক্লোজ করা (Late Closing avoidance)</td><td>৬</td></tr>
+        <tr><td>সহায়তার আগ্রহ ও সক্রিয় যোগাযোগ (Willingness to help/Ownership/Proactive Communication)</td><td>৬</td></tr>
+        <tr><td>পেশাদারিত্ব (Professionalism in reply)</td><td>৩</td></tr>
+        <tr class="section-header-row">
+          <td colspan="2">সার্ভিস নলেজ ও CE প্যারামিটার (৫০%) (Service Knowledge & CE Parameter)</td>
+        </tr>
+        <tr><td>সঠিক এস্কেলেশন, সমাধান ও ফলোআপ (Appropriate Escalation/ Proper Resolution/ Proper Follow up)</td><td>৮</td></tr>
+        <tr><td>সঠিক রিসোর্স ব্যবহার (Proper Resource Using/Handling)</td><td>৭</td></tr>
+        <tr><td>কার্যকর সমস্যা চিহ্নিতকরণ (Effective Probing & Issue Identification)</td><td>৮</td></tr>
+        <tr><td>সঠিক তথ্য প্রদান (Provide Correct Information /Service)</td><td>৮</td></tr>
+        <tr><td>সম্পূর্ণ তথ্য প্রদান (Provide Complete Information/ Service)</td><td>৮</td></tr>
+        <tr><td>সঠিকভাবে ট্যাগ বা RTC ইনপুট দেওয়া (Input Tag Correctly & Completely)</td><td>৮</td></tr>
+        <tr><td>অতিরিক্ত সহায়তা প্রদান (Offered Further Assistance)</td><td>৩</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</details>
+
+<details class="qa-card">
+  <summary><span>৩. কমপ্লেইন ম্যানেজমেন্ট (Complain Management)</span></summary>
+  <div class="qa-card-content">
+    <div class="table-wrap"><table class="cx-table qa-table">
+      <thead>
+        <tr>
+          <th>প্যারামিটার</th>
+          <th style="width: 120px;">স্কোর</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>ওয়েলকাম গ্রিটিংস (Welcome Greetings)</td><td>৩.০</td></tr>
+        <tr><td>কলের উদ্দেশ্য জানানো ও অনুমতি নেওয়া (Sharing Objective of the Call/Taking Permission)</td><td>৩.০</td></tr>
+        <tr><td>মনোযোগ সহকারে শোনা (Active Listening/ Focus On Call)</td><td>৮.০</td></tr>
+        <tr><td>কথা বলার দক্ষতা ও সঠিক উচ্চারণ (Speaking Skill / Proper Pronunciation)</td><td>৩.০</td></tr>
+        <tr><td>সহায়তা করার আগ্রহ ও আত্মবিশ্বাস (Ownership/Express willingness to help)</td><td>৮.০</td></tr>
+        <tr><td>দুঃখ প্রকাশ, সহানুভূতি ও বন্ধুত্বপূর্ণ টোন (Apology/Sympathy/Empathy/Friendly tone)</td><td>৮.০</td></tr>
+        <tr><td>পেশাদার ভাষা ও আচরণ (Demonstrated professional language and behavior)</td><td>৬.০</td></tr>
+        <tr><td>উপযুক্ত সমাপ্তি (Uses appropriate closing)</td><td>৫.০</td></tr>
+        <tr><td>সঠিক তদন্ত ও সমাধানের দক্ষতা (Proper probing and solving Skill)</td><td>৮.০</td></tr>
+        <tr><td>কলের আগে কমপ্লেইন ডিটেইলস জেনে নেওয়া (Obtains complaint details before call)</td><td>৪.০</td></tr>
+        <tr><td>উপযুক্ত সমাধান, এস্কেলেশন ও সিআরএম বর্ণনা (Appropriate resolution/escalation with CRM desc)</td><td>১০.০</td></tr>
+        <tr><td>টুলস ও রিসোর্সের সঠিক ব্যবহার (Uses Tools & Resources Effectively)</td><td>৮.০</td></tr>
+        <tr><td>সঠিক তথ্য প্রদান (Provide correct Service/ information)</td><td>১০.০</td></tr>
+        <tr><td>সম্পূর্ণ তথ্য প্রদান / CSAT ট্রান্সফার (Complete Information/ CSAT Transfer)</td><td>১০.০</td></tr>
+        <tr><td>কমপ্লেইন SLA সম্পর্কে জানানো (Inform respective Complaint SLA)</td><td>৬.০</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</details>
+
+<details class="qa-card">
+  <summary><span>৪. রিপোর্ট ইস্যু ও ইমেইল (Report Issue & Email)</span></summary>
+  <div class="qa-card-content">
+    <div class="table-wrap"><table class="cx-table qa-table">
+      <thead>
+        <tr>
+          <th>প্যারামিটার</th>
+          <th style="width: 120px;">স্কোর</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="section-header-row">
+          <td colspan="2">সফ্ট স্কিল ও লেখার ধরণ (৪০%) (Soft Skill & Writing Mannerism)</td>
+        </tr>
+        <tr><td>ওয়েলকাম গ্রিটিংস (Welcome Greeting)</td><td>৩</td></tr>
+        <tr><td>সতর্কতা ও ঠিকভাবে একনলেজ করা (Alertness/Acknowledging properly)</td><td>৭</td></tr>
+        <tr><td>সঠিক ফরম্যাট ও ভাষা ব্যবহার (Use of similar Format/Language)</td><td>৫</td></tr>
+        <tr><td>নম্রতা ও বিনম্র দুঃখ প্রকাশ (Polite, Magic & Formal words/ Sincere Apology)</td><td>৫</td></tr>
+        <tr><td>ব্যাকরণগতভাবে সঠিক বাক্য ও পাংচুয়েশন (Grammatically Correct Sentences)</td><td>৫</td></tr>
+        <tr><td>সঠিক বানান (Correct Spelling)</td><td>৫</td></tr>
+        <tr><td>গ্রাহককে শিক্ষিত ও সাহায্য করার ইচ্ছা (Willingness to help/educate the customer)</td><td>৭</td></tr>
+        <tr><td>উপযুক্ত সমাপনী শুভেচ্ছা (Appropriate End Greeting)</td><td>৩</td></tr>
+        <tr class="section-header-row">
+          <td colspan="2">সার্ভিস নলেজ ও CE প্যারামিটার (Service Knowledge & CE Parameter)</td>
+        </tr>
+        <tr><td>সঠিক অনুসন্ধান (Proper probing)</td><td>১০</td></tr>
+        <tr><td>সমস্যা চিহ্নিতকরণ ও সমাধান দক্ষতা (Issue Identification and Solving Skill)</td><td>১০</td></tr>
+        <tr><td>সঠিক এস্কেলেশন, সমাধান ও ফলোআপ (Appropriate Escalation/ Proper Resolution/ Proper Follow up)</td><td>১০</td></tr>
+        <tr><td>সঠিক ও সম্পূর্ণ তথ্য/সেবা প্রদান (Provide Correct/Complete Information/Service)</td><td>১০</td></tr>
+        <tr><td>সঠিক রিসোর্স ব্যবহার (Proper Resource Using/Handling)</td><td>১০</td></tr>
+        <tr><td>সঠিকভাবে ট্যাগ ইনপুট দেওয়া (Input Tag Correctly and Completely)</td><td>৫</td></tr>
+        <tr><td>সঠিক CRM নোটস (Proper CRM notes)</td><td>৫</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</details>
 `;
 
 TOPICS[9].html.en = `
